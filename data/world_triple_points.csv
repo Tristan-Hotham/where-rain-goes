@@ -1,0 +1,28 @@
+lat,lon,oceans,n,inland,country,near_city,near_city_km
+61.4,37.7,Atlantic | Arctic | Inland,3,True,Russia,Nyandoma (RU),137
+50.25,-105.95,Atlantic | Arctic | Inland,3,True,Canada,Moose Jaw (CA),34
+49.55,-108.4,Atlantic | Arctic | Inland,3,True,Canada,Medicine Hat (CA),172
+48.6,-113.5,Atlantic | Pacific | Arctic,3,False,United States of America,Cranbrook (CA),193
+47.65,107.55,Pacific | Arctic | Inland,3,True,Mongolia,Nalayh (MN),24
+44.55,-111.75,Atlantic | Pacific | Inland,3,True,United States of America,Rexburg (US),81
+40.2,41.55,Atlantic | Indian | Inland,3,True,Turkey,Pasinler (TR),27
+36.9,37.15,Atlantic | Indian | Inland,3,True,Turkey,Kilis (TR),21
+33.15,-107.85,Atlantic | Pacific | Inland,3,True,United States of America,Las Cruces (US),137
+32.75,92.2,Pacific | Indian | Inland,3,True,China,Nagqu (CN),142
+29.65,-108.05,Atlantic | Pacific | Inland,3,True,Mexico,Madera (MX),52
+29.55,34.5,Atlantic | Indian | Inland,3,True,Egypt,Eilat (IL),43
+26.1,-106.25,Atlantic | Pacific | Inland,3,True,Mexico,Santiago Papasquiaro (MX),144
+23.0,-103.0,Atlantic | Pacific | Inland,3,True,Mexico,Víctor Rosales (MX),31
+14.85,-91.25,Atlantic | Pacific | Inland,3,True,Guatemala,Nahualá (GT),7
+14.75,39.4,Atlantic | Indian | Inland,3,True,Eritrea,Ādīgrat (ET),53
+-6.05,33.95,Atlantic | Indian | Inland,3,True,Tanzania,Mgandu (TZ),23
+-9.35,32.8,Atlantic | Indian | Inland,3,True,Tanzania,Nakonde (ZM),6
+-12.65,18.4,Atlantic | Indian | Inland,3,True,Angola,Cuemba (AO),65
+-15.25,-70.95,Atlantic | Pacific | Inland,3,True,Peru,Ayaviri (PE),56
+-17.25,20.3,Atlantic | Indian | Inland,3,True,Angola,Ndiyona (NA),97
+-20.35,144.95,Pacific | Indian | Inland,3,True,Australia,Kirwan (AU),219
+-24.65,146.75,Pacific | Indian | Inland,3,True,Australia,Toowoomba (AU),612
+-24.85,25.15,Atlantic | Indian | Inland,3,True,Botswana,Kanye (BW),23
+-27.7,-69.1,Atlantic | Pacific | Inland,3,True,Chile,Vallenar (CL),190
+-34.75,-66.25,Atlantic | Pacific | Inland,3,True,Argentina,General Alvear (AR),134
+-47.65,-71.4,Atlantic | Pacific | Inland,3,True,Argentina,Las Heras (AR),224

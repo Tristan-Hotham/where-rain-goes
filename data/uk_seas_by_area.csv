@@ -1,0 +1,39 @@
+area,sea,sea_short,km2,share
+England,Bristol Channel,Bristol Channel,19264,0.1453
+England,Irish Sea and St. George's Channel,Irish Sea,15235,0.1149
+England,Celtic Sea,Celtic Sea,1510,0.0114
+England,English Channel,English Channel,19518,0.1472
+England,North Sea,North Sea,77087,0.5813
+Scotland,Irish Sea and St. George's Channel,Irish Sea,6953,0.0818
+Scotland,Inner Seas off the West Coast of Scotland,Inner Seas (west Scotland),30566,0.3596
+Scotland,North Atlantic Ocean,Atlantic Ocean,5291,0.0622
+Scotland,North Sea,North Sea,42198,0.4964
+Wales,Bristol Channel,Bristol Channel,11246,0.5175
+Wales,Irish Sea and St. George's Channel,Irish Sea,9341,0.4299
+Wales,Celtic Sea,Celtic Sea,1143,0.0526
+Northern Ireland,Irish Sea and St. George's Channel,Irish Sea,1543,0.1085
+Northern Ireland,Inner Seas off the West Coast of Scotland,Inner Seas (west Scotland),10614,0.7466
+Northern Ireland,North Atlantic Ocean,Atlantic Ocean,2060,0.1449
+Ireland,Irish Sea and St. George's Channel,Irish Sea,9785,0.1337
+Ireland,Inner Seas off the West Coast of Scotland,Inner Seas (west Scotland),3780,0.0516
+Ireland,North Atlantic Ocean,Atlantic Ocean,40956,0.5595
+Ireland,Celtic Sea,Celtic Sea,18676,0.2552
+Isle of Man,Irish Sea and St. George's Channel,Irish Sea,697,1.0
+Great Britain,Bristol Channel,Bristol Channel,30510,0.1275
+Great Britain,Irish Sea and St. George's Channel,Irish Sea,31529,0.1317
+Great Britain,Inner Seas off the West Coast of Scotland,Inner Seas (west Scotland),30566,0.1277
+Great Britain,North Atlantic Ocean,Atlantic Ocean,5291,0.0221
+Great Britain,Celtic Sea,Celtic Sea,2653,0.0111
+Great Britain,English Channel,English Channel,19518,0.0815
+Great Britain,North Sea,North Sea,119285,0.4984
+United Kingdom,Bristol Channel,Bristol Channel,30510,0.1203
+United Kingdom,Irish Sea and St. George's Channel,Irish Sea,33072,0.1304
+United Kingdom,Inner Seas off the West Coast of Scotland,Inner Seas (west Scotland),41180,0.1624
+United Kingdom,North Atlantic Ocean,Atlantic Ocean,7350,0.029
+United Kingdom,Celtic Sea,Celtic Sea,2653,0.0105
+United Kingdom,English Channel,English Channel,19518,0.077
+United Kingdom,North Sea,North Sea,119285,0.4704
+Island of Ireland,Irish Sea and St. George's Channel,Irish Sea,11328,0.1296
+Island of Ireland,Inner Seas off the West Coast of Scotland,Inner Seas (west Scotland),14394,0.1647
+Island of Ireland,North Atlantic Ocean,Atlantic Ocean,43016,0.4921
+Island of Ireland,Celtic Sea,Celtic Sea,18676,0.2137

@@ -1,0 +1,176 @@
+country,km2,n_seas,main_sea,main_sea_share,atlantic_share,pacific_share,indian_share,arctic_share,southern_share,inland_share,n_oceans
+Russia,16824931,12,Kara Sea,0.316,0.0553,0.1415,0.0,0.6866,0.0,0.1166,3
+Canada,9853182,12,Hudson Bay,0.309,0.1526,0.101,0.0,0.7361,0.0,0.0103,3
+United States of America,9438995,11,Gulf of Mexico,0.453,0.5842,0.2872,0.0,0.0489,0.0,0.0797,3
+China,9371267,8,Eastern China Sea,0.227,0.0,0.5798,0.0609,0.0053,0.0,0.354,3
+Brazil,8502013,3,South Atlantic Ocean,0.822,1.0,0.0,0.0,0.0,0.0,0.0,1
+Australia,7696028,7,Great Australian Bight,0.132,0.0,0.0788,0.3926,0.0,0.0,0.5286,2
+India,3155950,4,Bay of Bengal,0.694,0.0,0.0,0.9722,0.0,0.0,0.0278,1
+Argentina,2782024,3,Rio de La Plata,0.331,0.6175,0.0177,0.0,0.0,0.0,0.3649,2
+Kazakhstan,2703781,1,Kara Sea,0.146,0.0,0.0,0.0,0.1458,0.0,0.8542,1
+Dem. Rep. Congo,2335188,2,South Atlantic Ocean,0.991,0.9995,0.0,0.0005,0.0,0.0,0.0,1
+Algeria,2312084,4,Gulf of Guinea,0.068,0.1313,0.0,0.0,0.0,0.0,0.8687,1
+Greenland,2118850,6,Greenland Sea,0.326,0.1432,0.0,0.0,0.8568,0.0,0.0,2
+Mexico,1958986,4,Gulf of Mexico,0.324,0.343,0.4456,0.0,0.0,0.0,0.2114,2
+Saudi Arabia,1924513,3,Red Sea,0.137,0.0,0.0,0.1974,0.0,0.0,0.8026,1
+Indonesia,1873186,17,South China Sea,0.187,0.0,0.7341,0.2658,0.0,0.0,0.0,2
+Sudan,1861165,2,Mediterranean Sea - Eastern Basin,0.664,0.6643,0.0,0.0514,0.0,0.0,0.2842,2
+Libya,1627512,1,Mediterranean Sea - Eastern Basin,0.053,0.0532,0.0,0.0,0.0,0.0,0.9468,1
+Iran,1622374,2,Persian Gulf,0.216,0.0,0.0,0.2574,0.0,0.0,0.7426,1
+Mongolia,1560837,2,Kara Sea,0.203,0.0,0.087,0.0,0.2027,0.0,0.7103,2
+Peru,1294618,2,South Atlantic Ocean,0.744,0.7442,0.2157,0.0,0.0,0.0,0.0401,2
+Chad,1271458,1,Gulf of Guinea,0.018,0.0185,0.0,0.0,0.0,0.0,0.9815,1
+Mali,1257897,2,Gulf of Guinea,0.456,0.5938,0.0,0.0,0.0,0.0,0.4062,1
+Angola,1249380,2,South Atlantic Ocean,0.632,0.6316,0.0,0.2043,0.0,0.0,0.1641,2
+South Africa,1220465,3,South Atlantic Ocean,0.512,0.5121,0.0,0.4469,0.0,0.0,0.041,2
+Niger,1184622,1,Gulf of Guinea,0.408,0.4084,0.0,0.0,0.0,0.0,0.5916,1
+Colombia,1139287,4,Caribbean Sea,0.329,0.932,0.068,0.0,0.0,0.0,0.0,2
+Ethiopia,1131972,2,Mediterranean Sea - Eastern Basin,0.324,0.3243,0.0,0.3147,0.0,0.0,0.361,2
+Bolivia,1090767,3,South Atlantic Ocean,0.652,0.8513,0.0087,0.0,0.0,0.0,0.1401,2
+Mauritania,1039158,1,North Atlantic Ocean,0.25,0.2524,0.0,0.0,0.0,0.0,0.7476,1
+Egypt,1000627,4,Mediterranean Sea - Eastern Basin,0.303,0.3035,0.0,0.0927,0.0,0.0,0.6038,2
+Tanzania,945635,4,Indian Ocean,0.434,0.3005,0.0,0.4633,0.0,0.0,0.2362,2
+Venezuela,915983,3,North Atlantic Ocean,0.705,0.9967,0.0,0.0,0.0,0.0,0.0033,1
+Nigeria,910780,1,Gulf of Guinea,0.803,0.8032,0.0,0.0,0.0,0.0,0.1968,1
+Pakistan,873554,2,Arabian Sea,0.813,0.0,0.0,0.8422,0.0,0.0,0.1578,1
+Namibia,826224,2,South Atlantic Ocean,0.516,0.5157,0.0,0.0207,0.0,0.0,0.4636,2
+Mozambique,790324,2,Mozambique Channel,0.859,0.0,0.0,0.9854,0.0,0.0,0.0146,1
+Turkey,778530,5,Black Sea,0.331,0.6202,0.0,0.2243,0.0,0.0,0.1555,2
+Zambia,753856,2,Mozambique Channel,0.765,0.2327,0.0,0.7654,0.0,0.0,0.0019,2
+Chile,725809,2,South Pacific Ocean,0.845,0.0225,0.8454,0.0,0.0,0.0,0.1321,2
+Myanmar,663898,3,Andaman or Burma Sea,0.87,0.0,0.0327,0.9673,0.0,0.0,0.0,2
+Afghanistan,642120,1,Arabian Sea,0.109,0.0,0.0,0.1094,0.0,0.0,0.8906,1
+France,635161,6,Bay of Biscay,0.409,0.9956,0.0,0.0042,0.0,0.0,0.0002,1
+S. Sudan,629770,1,Mediterranean Sea - Eastern Basin,0.979,0.9816,0.0,0.0,0.0,0.0,0.0184,1
+Central African Rep.,620581,1,South Atlantic Ocean,0.653,0.6542,0.0,0.0,0.0,0.0,0.3458,1
+Madagascar,592105,2,Mozambique Channel,0.675,0.0,0.0,0.9858,0.0,0.0,0.0142,1
+Morocco,590799,2,North Atlantic Ocean,0.575,0.6927,0.0,0.0,0.0,0.0,0.3073,1
+Kenya,587583,2,Indian Ocean,0.621,0.0867,0.0,0.6206,0.0,0.0,0.2927,2
+Botswana,579028,2,South Atlantic Ocean,0.234,0.2342,0.0,0.1693,0.0,0.0,0.5965,2
+Ukraine,569506,3,Black Sea,0.82,1.0,0.0,0.0,0.0,0.0,0.0,1
+Thailand,515789,4,Gulf of Thailand,0.554,0.0,0.9182,0.0818,0.0,0.0,0.0,2
+Spain,505560,5,North Atlantic Ocean,0.574,0.9949,0.0,0.0,0.0,0.0,0.0051,1
+Somalia,473886,3,Indian Ocean,0.698,0.0,0.0,0.7434,0.0,0.0,0.2566,1
+Turkmenistan,469808,0,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0
+Cameroon,466575,2,Gulf of Guinea,0.681,0.8965,0.0,0.0,0.0,0.0,0.1035,1
+Papua New Guinea,463018,5,Coral Sea,0.459,0.0,0.973,0.0234,0.0,0.0,0.0036,2
+Yemen,453997,3,Gulf of Aden,0.271,0.0,0.0,0.4674,0.0,0.0,0.5326,1
+Uzbekistan,446047,0,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0
+Sweden,443084,4,Gulf of Bothnia,0.649,1.0,0.0,0.0,0.0,0.0,0.0,1
+Iraq,437336,1,Persian Gulf,0.886,0.0,0.0,0.8857,0.0,0.0,0.1143,1
+Paraguay,400426,2,Rio de La Plata,0.985,0.9853,0.0147,0.0,0.0,0.0,0.0,2
+Zimbabwe,390573,1,Mozambique Channel,0.934,0.0,0.0,0.934,0.0,0.0,0.066,1
+Norway,372990,8,Norwegian Sea,0.387,0.7557,0.0,0.0,0.2443,0.0,0.0,2
+Japan,370990,6,Japan Sea,0.357,0.0,1.0,0.0,0.0,0.0,0.0,1
+Germany,356484,3,North Sea,0.761,1.0,0.0,0.0,0.0,0.0,0.0,1
+Congo,346279,1,South Atlantic Ocean,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Finland,330082,5,Gulf of Bothnia,0.579,0.9082,0.0,0.0,0.0918,0.0,0.0,2
+Malaysia,329081,6,South China Sea,0.604,0.0,0.8338,0.1662,0.0,0.0,0.0,2
+Vietnam,328969,2,South China Sea,0.962,0.0,0.9976,0.0,0.0,0.0,0.0024,1
+Côte d'Ivoire,321826,2,Gulf of Guinea,0.993,1.0,0.0,0.0,0.0,0.0,0.0,1
+Poland,311784,1,Baltic Sea,0.996,1.0,0.0,0.0,0.0,0.0,0.0,1
+Oman,311567,3,Arabian Sea,0.298,0.0,0.0,0.3962,0.0,0.0,0.6038,1
+Italy,300129,6,Adriatic Sea,0.51,0.9921,0.0,0.0,0.0,0.0,0.0079,1
+Philippines,289645,4,Philippine Sea,0.457,0.0,1.0,0.0,0.0,0.0,0.0,1
+Burkina Faso,273656,1,Gulf of Guinea,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+New Zealand,263216,2,South Pacific Ocean,0.514,0.0,1.0,0.0,0.0,0.0,0.0,1
+Gabon,260738,2,South Atlantic Ocean,0.875,1.0,0.0,0.0,0.0,0.0,0.0,1
+Ecuador,255481,3,South Atlantic Ocean,0.512,0.5117,0.4883,0.0,0.0,0.0,0.0,2
+Guinea,244695,2,North Atlantic Ocean,0.57,1.0,0.0,0.0,0.0,0.0,0.0,1
+Uganda,242704,1,Mediterranean Sea - Eastern Basin,0.982,0.9838,0.0,0.0,0.0,0.0,0.0162,1
+United Kingdom,241993,7,North Sea,0.464,1.0,0.0,0.0,0.0,0.0,0.0,1
+Ghana,239200,1,Gulf of Guinea,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Romania,235587,1,Black Sea,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Laos,228725,1,South China Sea,0.992,0.0,0.9949,0.0,0.0,0.0,0.0051,1
+Guyana,211845,2,North Atlantic Ocean,0.939,1.0,0.0,0.0,0.0,0.0,0.0,1
+Belarus,206868,3,Black Sea,0.574,1.0,0.0,0.0,0.0,0.0,0.0,1
+Kyrgyzstan,198793,0,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0
+Senegal,196305,1,North Atlantic Ocean,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Syria,185968,2,Persian Gulf,0.49,0.1147,0.0,0.4897,0.0,0.0,0.3955,2
+Cambodia,181735,2,South China Sea,0.891,0.0,1.0,0.0,0.0,0.0,0.0,1
+Uruguay,177021,2,Rio de La Plata,0.786,1.0,0.0,0.0,0.0,0.0,0.0,1
+Somaliland,167763,2,Indian Ocean,0.368,0.0,0.0,0.7185,0.0,0.0,0.2815,1
+Tunisia,156495,2,Mediterranean Sea - Eastern Basin,0.333,0.4907,0.0,0.0,0.0,0.0,0.5093,1
+Nepal,147317,1,Bay of Bengal,1.0,0.0,0.0,1.0,0.0,0.0,0.0,1
+Suriname,145866,1,North Atlantic Ocean,0.999,1.0,0.0,0.0,0.0,0.0,0.0,1
+Tajikistan,142379,0,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0
+Bangladesh,137030,1,Bay of Bengal,1.0,0.0,0.0,1.0,0.0,0.0,0.0,1
+Greece,130522,4,Aegean Sea,0.629,0.9746,0.0,0.0,0.0,0.0,0.0254,1
+Nicaragua,128849,2,Caribbean Sea,0.904,0.9035,0.0948,0.0,0.0,0.0,0.0016,2
+Eritrea,122663,2,Red Sea,0.705,0.2073,0.0,0.7048,0.0,0.0,0.0879,2
+North Korea,121863,2,Yellow Sea,0.682,0.0,1.0,0.0,0.0,0.0,0.0,1
+Malawi,120000,2,Mozambique Channel,0.933,0.0008,0.0,0.9523,0.0,0.0,0.0469,1
+Benin,116795,1,Gulf of Guinea,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Bulgaria,112610,2,Black Sea,0.579,1.0,0.0,0.0,0.0,0.0,0.0,1
+Honduras,112411,2,Caribbean Sea,0.826,0.8257,0.1743,0.0,0.0,0.0,0.0,2
+Cuba,109068,3,Caribbean Sea,0.578,1.0,0.0,0.0,0.0,0.0,0.0,1
+Guatemala,108513,3,Gulf of Mexico,0.45,0.7591,0.2188,0.0,0.0,0.0,0.0221,2
+Iceland,100895,2,Greenland Sea,0.501,0.4995,0.0,0.0,0.5005,0.0,0.0,2
+South Korea,97963,2,Yellow Sea,0.528,0.0,1.0,0.0,0.0,0.0,0.0,1
+Liberia,95971,2,North Atlantic Ocean,0.878,1.0,0.0,0.0,0.0,0.0,0.0,1
+Hungary,92995,1,Black Sea,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Portugal,90903,1,North Atlantic Ocean,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+W. Sahara,90088,1,North Atlantic Ocean,0.403,0.4028,0.0,0.0,0.0,0.0,0.5972,1
+Jordan,89097,1,Gulf of Aqaba,0.07,0.0,0.0,0.0711,0.0,0.0,0.9289,1
+Azerbaijan,85696,0,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0
+Austria,83933,2,Black Sea,0.957,1.0,0.0,0.0,0.0,0.0,0.0,1
+Czechia,78319,3,North Sea,0.632,1.0,0.0,0.0,0.0,0.0,0.0,1
+Serbia,77455,2,Black Sea,0.982,0.9974,0.0,0.0,0.0,0.0,0.0026,1
+Panama,74527,2,North Pacific Ocean,0.702,0.2982,0.7018,0.0,0.0,0.0,0.0,2
+Sierra Leone,71917,1,North Atlantic Ocean,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+United Arab Emirates,70786,2,Persian Gulf,0.681,0.0,0.0,0.7117,0.0,0.0,0.2883,1
+Georgia,69347,1,Black Sea,0.461,0.4613,0.0,0.0,0.0,0.0,0.5387,1
+Ireland,69039,4,North Atlantic Ocean,0.558,1.0,0.0,0.0,0.0,0.0,0.0,1
+Sri Lanka,65925,2,Bay of Bengal,0.617,0.0,0.0,1.0,0.0,0.0,0.0,1
+Lithuania,64424,2,Baltic Sea,0.839,1.0,0.0,0.0,0.0,0.0,0.0,1
+Latvia,64061,3,Gulf of Riga,0.774,1.0,0.0,0.0,0.0,0.0,0.0,1
+Togo,56964,1,Gulf of Guinea,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Croatia,54676,2,Black Sea,0.6,0.8999,0.0,0.0,0.0,0.0,0.1001,1
+Bosnia and Herz.,51747,2,Black Sea,0.703,0.9095,0.0,0.0,0.0,0.0,0.0905,1
+Costa Rica,51020,2,North Pacific Ocean,0.533,0.4668,0.5332,0.0,0.0,0.0,0.0,2
+Dominican Rep.,48399,2,Caribbean Sea,0.514,1.0,0.0,0.0,0.0,0.0,0.0,1
+Slovakia,48305,2,Black Sea,0.962,1.0,0.0,0.0,0.0,0.0,0.0,1
+Estonia,45101,3,Gulf of Finland,0.592,1.0,0.0,0.0,0.0,0.0,0.0,1
+Denmark,41951,4,Kattegat,0.574,1.0,0.0,0.0,0.0,0.0,0.0,1
+Switzerland,41198,4,North Sea,0.673,1.0,0.0,0.0,0.0,0.0,0.0,1
+Bhutan,40415,1,Bay of Bengal,1.0,0.0,0.0,1.0,0.0,0.0,0.0,1
+Taiwan,35929,3,South China Sea,0.686,0.0,1.0,0.0,0.0,0.0,0.0,1
+Netherlands,35230,2,North Sea,0.991,1.0,0.0,0.0,0.0,0.0,0.0,1
+Moldova,33312,1,Black Sea,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Guinea-Bissau,32891,1,North Atlantic Ocean,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Belgium,30387,1,North Sea,0.996,1.0,0.0,0.0,0.0,0.0,0.0,1
+Lesotho,30322,1,South Atlantic Ocean,0.999,0.9991,0.0,0.0009,0.0,0.0,0.0,1
+Armenia,29544,0,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0
+Albania,28351,3,Adriatic Sea,0.974,0.9934,0.0,0.0,0.0,0.0,0.0066,1
+Burundi,27339,2,South Atlantic Ocean,0.505,1.0,0.0,0.0,0.0,0.0,0.0,1
+Eq. Guinea,26632,2,Gulf of Guinea,0.935,1.0,0.0,0.0,0.0,0.0,0.0,1
+Haiti,26546,2,Caribbean Sea,0.821,1.0,0.0,0.0,0.0,0.0,0.0,1
+Solomon Is.,26441,3,Solomon Sea,0.692,0.0,1.0,0.0,0.0,0.0,0.0,1
+Rwanda,25424,2,Mediterranean Sea - Eastern Basin,0.815,1.0,0.0,0.0,0.0,0.0,0.0,1
+North Macedonia,25406,2,Aegean Sea,0.859,0.966,0.0,0.0,0.0,0.0,0.034,1
+Israel,22068,2,Mediterranean Sea - Eastern Basin,0.509,0.509,0.0,0.0268,0.0,0.0,0.4643,2
+Belize,21967,1,Caribbean Sea,0.997,1.0,0.0,0.0,0.0,0.0,0.0,1
+Djibouti,21819,2,Gulf of Aden,0.316,0.0,0.0,0.481,0.0,0.0,0.519,1
+El Salvador,20688,1,North Pacific Ocean,1.0,0.0,1.0,0.0,0.0,0.0,0.0,1
+Slovenia,20313,2,Black Sea,0.778,0.9862,0.0,0.0,0.0,0.0,0.0138,1
+New Caledonia,18574,1,Coral Sea,1.0,0.0,1.0,0.0,0.0,0.0,0.0,1
+Fiji,18340,1,South Pacific Ocean,1.0,0.0,1.0,0.0,0.0,0.0,0.0,1
+Kuwait,17486,1,Persian Gulf,0.669,0.0,0.0,0.6695,0.0,0.0,0.3305,1
+eSwatini,17004,1,Mozambique Channel,1.0,0.0,0.0,1.0,0.0,0.0,0.0,1
+Timor-Leste,15058,3,Banda Sea,0.491,0.0,0.4911,0.5089,0.0,0.0,0.0,2
+Montenegro,13588,2,Black Sea,0.489,0.798,0.0,0.0,0.0,0.0,0.202,1
+Bahamas,12255,1,North Atlantic Ocean,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Vanuatu,11392,2,Coral Sea,0.964,0.0,1.0,0.0,0.0,0.0,0.0,1
+Qatar,11233,1,Persian Gulf,0.771,0.0,0.0,0.7711,0.0,0.0,0.2289,1
+Falkland Is.,11217,1,South Atlantic Ocean,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Jamaica,10985,1,Caribbean Sea,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Kosovo,10950,3,Black Sea,0.494,1.0,0.0,0.0,0.0,0.0,0.0,1
+Gambia,10732,1,North Atlantic Ocean,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Lebanon,9925,1,Mediterranean Sea - Eastern Basin,0.93,0.9298,0.0,0.0,0.0,0.0,0.0702,1
+Puerto Rico,8896,2,Caribbean Sea,0.581,1.0,0.0,0.0,0.0,0.0,0.0,1
+Fr. S. Antarctic Lands,6651,1,Indian Ocean,1.0,0.0,0.0,1.0,0.0,0.0,0.0,1
+Baikonur,6573,0,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0
+Palestine,5982,1,Mediterranean Sea - Eastern Basin,0.513,0.513,0.0,0.0,0.0,0.0,0.487,1
+Brunei,5732,1,South China Sea,1.0,0.0,1.0,0.0,0.0,0.0,0.0,1
+Cyprus,5399,1,Mediterranean Sea - Eastern Basin,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1
+Trinidad and Tobago,5046,2,Caribbean Sea,0.717,1.0,0.0,0.0,0.0,0.0,0.0,1

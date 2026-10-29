@@ -1,0 +1,1918 @@
+{
+ "uk": {
+  "areas": {
+   "England": {
+    "Bristol Channel": {
+     "km2": 19264,
+     "share": 0.1453
+    },
+    "Irish Sea": {
+     "km2": 15235,
+     "share": 0.1149
+    },
+    "Celtic Sea": {
+     "km2": 1510,
+     "share": 0.0114
+    },
+    "English Channel": {
+     "km2": 19518,
+     "share": 0.1472
+    },
+    "North Sea": {
+     "km2": 77087,
+     "share": 0.5813
+    }
+   },
+   "Great Britain": {
+    "Bristol Channel": {
+     "km2": 30510,
+     "share": 0.1275
+    },
+    "Irish Sea": {
+     "km2": 31529,
+     "share": 0.1317
+    },
+    "Inner Seas (west Scotland)": {
+     "km2": 30566,
+     "share": 0.1277
+    },
+    "Atlantic Ocean": {
+     "km2": 5291,
+     "share": 0.0221
+    },
+    "Celtic Sea": {
+     "km2": 2653,
+     "share": 0.0111
+    },
+    "English Channel": {
+     "km2": 19518,
+     "share": 0.0815
+    },
+    "North Sea": {
+     "km2": 119285,
+     "share": 0.4984
+    }
+   },
+   "Ireland": {
+    "Irish Sea": {
+     "km2": 9785,
+     "share": 0.1337
+    },
+    "Inner Seas (west Scotland)": {
+     "km2": 3780,
+     "share": 0.0516
+    },
+    "Atlantic Ocean": {
+     "km2": 40956,
+     "share": 0.5595
+    },
+    "Celtic Sea": {
+     "km2": 18676,
+     "share": 0.2552
+    }
+   },
+   "Island of Ireland": {
+    "Irish Sea": {
+     "km2": 11328,
+     "share": 0.1296
+    },
+    "Inner Seas (west Scotland)": {
+     "km2": 14394,
+     "share": 0.1647
+    },
+    "Atlantic Ocean": {
+     "km2": 43016,
+     "share": 0.4921
+    },
+    "Celtic Sea": {
+     "km2": 18676,
+     "share": 0.2137
+    }
+   },
+   "Isle of Man": {
+    "Irish Sea": {
+     "km2": 697,
+     "share": 1.0
+    }
+   },
+   "Northern Ireland": {
+    "Irish Sea": {
+     "km2": 1543,
+     "share": 0.1085
+    },
+    "Inner Seas (west Scotland)": {
+     "km2": 10614,
+     "share": 0.7466
+    },
+    "Atlantic Ocean": {
+     "km2": 2060,
+     "share": 0.1449
+    }
+   },
+   "Scotland": {
+    "Irish Sea": {
+     "km2": 6953,
+     "share": 0.0818
+    },
+    "Inner Seas (west Scotland)": {
+     "km2": 30566,
+     "share": 0.3596
+    },
+    "Atlantic Ocean": {
+     "km2": 5291,
+     "share": 0.0622
+    },
+    "North Sea": {
+     "km2": 42198,
+     "share": 0.4964
+    }
+   },
+   "United Kingdom": {
+    "Bristol Channel": {
+     "km2": 30510,
+     "share": 0.1203
+    },
+    "Irish Sea": {
+     "km2": 33072,
+     "share": 0.1304
+    },
+    "Inner Seas (west Scotland)": {
+     "km2": 41180,
+     "share": 0.1624
+    },
+    "Atlantic Ocean": {
+     "km2": 7350,
+     "share": 0.029
+    },
+    "Celtic Sea": {
+     "km2": 2653,
+     "share": 0.0105
+    },
+    "English Channel": {
+     "km2": 19518,
+     "share": 0.077
+    },
+    "North Sea": {
+     "km2": 119285,
+     "share": 0.4704
+    }
+   },
+   "Wales": {
+    "Bristol Channel": {
+     "km2": 11246,
+     "share": 0.5175
+    },
+    "Irish Sea": {
+     "km2": 9341,
+     "share": 0.4299
+    },
+    "Celtic Sea": {
+     "km2": 1143,
+     "share": 0.0526
+    }
+   }
+  },
+  "areas_total_km2": {
+   "England": 132614,
+   "Great Britain": 239352,
+   "Ireland": 73197,
+   "Island of Ireland": 87414,
+   "Isle of Man": 697,
+   "Northern Ireland": 14217,
+   "Scotland": 85008,
+   "United Kingdom": 253568,
+   "Wales": 21730
+  },
+  "places": {
+   "n_cities_towns": 1426,
+   "n_villages": 15155,
+   "towns_by_sea": {
+    "North Sea": 733,
+    "Irish Sea": 252,
+    "Bristol Channel": 212,
+    "English Channel": 148,
+    "Inner Seas (west Scotland)": 59,
+    "Celtic Sea": 21,
+    "Atlantic Ocean": 1
+   },
+   "villages_by_sea": {
+    "North Sea": 8034,
+    "Bristol Channel": 2665,
+    "Irish Sea": 1846,
+    "English Channel": 1796,
+    "Inner Seas (west Scotland)": 511,
+    "Celtic Sea": 243,
+    "Atlantic Ocean": 60
+   },
+   "towns_on_watershed": 7,
+   "villages_on_watershed": 128,
+   "towns_on_watershed_list": [
+    [
+     "Bedworth",
+     "Warwickshire",
+     "North Sea"
+    ],
+    [
+     "Blackheath",
+     "Sandwell",
+     "North Sea"
+    ],
+    [
+     "Cumbernauld",
+     "North Lanarkshire",
+     "Inner Seas (west Scotland)"
+    ],
+    [
+     "Dudley",
+     "Dudley",
+     "North Sea"
+    ],
+    [
+     "Market Drayton",
+     "Shropshire",
+     "Bristol Channel"
+    ],
+    [
+     "Rowley Regis",
+     "Sandwell",
+     "North Sea"
+    ],
+    [
+     "Sedgley",
+     "Dudley",
+     "Bristol Channel"
+    ]
+   ],
+   "median_town_dist_km": 39.349999999999994,
+   "farthest_towns": [
+    {
+     "name": "Llanidloes",
+     "county": "Powys - Powys",
+     "sea": "Bristol Channel",
+     "km": 303.7,
+     "route": "River Severn (Afon Hafren)"
+    },
+    {
+     "name": "Cirencester",
+     "county": "Gloucestershire",
+     "sea": "North Sea",
+     "km": 300.4,
+     "route": "River Churn > River Thames"
+    },
+    {
+     "name": "Swindon",
+     "county": "Swindon",
+     "sea": "North Sea",
+     "km": 297.8,
+     "route": "River Ray > River Thames"
+    },
+    {
+     "name": "Northleach",
+     "county": "Gloucestershire",
+     "sea": "North Sea",
+     "km": 295.2,
+     "route": "River Leach > River Thames"
+    },
+    {
+     "name": "Stow-on-the-Wold",
+     "county": "Gloucestershire",
+     "sea": "North Sea",
+     "km": 293.3,
+     "route": "River Dikler > River Windrush > River Thames"
+    },
+    {
+     "name": "Cricklade",
+     "county": "Wiltshire",
+     "sea": "North Sea",
+     "km": 287.0,
+     "route": "River Thames"
+    },
+    {
+     "name": "Moreton-in-Marsh",
+     "county": "Gloucestershire",
+     "sea": "North Sea",
+     "km": 282.6,
+     "route": "River Evenlode > River Thames"
+    },
+    {
+     "name": "Highworth",
+     "county": "Swindon",
+     "sea": "North Sea",
+     "km": 280.6,
+     "route": "Bydemill Brook > River Thames"
+    },
+    {
+     "name": "Fairford",
+     "county": "Gloucestershire",
+     "sea": "North Sea",
+     "km": 279.5,
+     "route": "River Coln > River Thames"
+    },
+    {
+     "name": "Chipping Norton",
+     "county": "Oxfordshire",
+     "sea": "North Sea",
+     "km": 279.2,
+     "route": "Cornwell Brook > River Evenlode > River Thames"
+    },
+    {
+     "name": "Y Drenewydd",
+     "county": "Powys - Powys",
+     "sea": "Bristol Channel",
+     "km": 278.3,
+     "route": "River Severn (Afon Hafren)"
+    },
+    {
+     "name": "Llanfair Caereinion",
+     "county": "Powys - Powys",
+     "sea": "Bristol Channel",
+     "km": 275.9,
+     "route": "Afon Einion > River Vyrnwy (Afon Efyrnwy) > River Severn (Afon Hafren)"
+    }
+   ],
+   "cities": [
+    {
+     "name": "Aberdeen",
+     "sea": "North Sea",
+     "km": 2.9,
+     "route": ""
+    },
+    {
+     "name": "Abertawe",
+     "sea": "Bristol Channel",
+     "km": 3.0,
+     "route": "River Tawe (Afon Tawe)"
+    },
+    {
+     "name": "Bangor",
+     "sea": "Irish Sea",
+     "km": 7.0,
+     "route": ""
+    },
+    {
+     "name": "Bath",
+     "sea": "Bristol Channel",
+     "km": 41.0,
+     "route": "River Avon"
+    },
+    {
+     "name": "Birmingham",
+     "sea": "North Sea",
+     "km": 242.5,
+     "route": "River Rea > River Tame > River Trent"
+    },
+    {
+     "name": "Bradford",
+     "sea": "North Sea",
+     "km": 109.6,
+     "route": "Bradford Beck > River Aire > River Ouse"
+    },
+    {
+     "name": "Brighton and Hove",
+     "sea": "English Channel",
+     "km": 1.3,
+     "route": ""
+    },
+    {
+     "name": "Bristol",
+     "sea": "Bristol Channel",
+     "km": 14.0,
+     "route": "River Avon"
+    },
+    {
+     "name": "Cambridge",
+     "sea": "North Sea",
+     "km": 46.7,
+     "route": "River Cam > River Great Ouse"
+    },
+    {
+     "name": "Canterbury",
+     "sea": "North Sea",
+     "km": 22.9,
+     "route": "Great Stour > River Wantsum"
+    },
+    {
+     "name": "Cardiff",
+     "sea": "Bristol Channel",
+     "km": 5.8,
+     "route": "River Taff (Afon Taf)"
+    },
+    {
+     "name": "Carlisle",
+     "sea": "Irish Sea",
+     "km": 18.5,
+     "route": "River Eden"
+    },
+    {
+     "name": "Casnewydd",
+     "sea": "Bristol Channel",
+     "km": 7.2,
+     "route": ""
+    },
+    {
+     "name": "Chelmsford",
+     "sea": "North Sea",
+     "km": 22.5,
+     "route": "River Chelmer > River Blackwater"
+    },
+    {
+     "name": "Chester",
+     "sea": "Irish Sea",
+     "km": 20.9,
+     "route": "River Dee (Afon Dyfrdwy)"
+    },
+    {
+     "name": "Chichester",
+     "sea": "English Channel",
+     "km": 10.1,
+     "route": "River Lavant > Chichester Channel"
+    },
+    {
+     "name": "City of London",
+     "sea": "North Sea",
+     "km": 39.2,
+     "route": "River Thames"
+    },
+    {
+     "name": "City of Westminster",
+     "sea": "North Sea",
+     "km": 41.0,
+     "route": "River Thames"
+    },
+    {
+     "name": "Colchester",
+     "sea": "North Sea",
+     "km": 15.0,
+     "route": "River Colne"
+    },
+    {
+     "name": "Coventry",
+     "sea": "Bristol Channel",
+     "km": 194.3,
+     "route": "River Sherbourne > River Sowe > River Avon > River Severn (Afon Hafren)"
+    },
+    {
+     "name": "Derby",
+     "sea": "North Sea",
+     "km": 163.4,
+     "route": "River Derwent > River Trent"
+    },
+    {
+     "name": "Doncaster",
+     "sea": "North Sea",
+     "km": 48.4,
+     "route": "River Don > Dutch River > River Ouse"
+    },
+    {
+     "name": "Dundee",
+     "sea": "North Sea",
+     "km": 4.1,
+     "route": ""
+    },
+    {
+     "name": "Dunfermline",
+     "sea": "North Sea",
+     "km": 6.9,
+     "route": "Tower Burn > Lyne Burn"
+    },
+    {
+     "name": "Durham",
+     "sea": "North Sea",
+     "km": 33.2,
+     "route": "River Wear"
+    },
+    {
+     "name": "Edinburgh",
+     "sea": "North Sea",
+     "km": 5.6,
+     "route": ""
+    },
+    {
+     "name": "Ely",
+     "sea": "North Sea",
+     "km": 7.5,
+     "route": ""
+    },
+    {
+     "name": "Exeter",
+     "sea": "English Channel",
+     "km": 9.3,
+     "route": "River Exe"
+    },
+    {
+     "name": "Glasgow",
+     "sea": "Inner Seas (west Scotland)",
+     "km": 24.5,
+     "route": "Molendinar Burn > River Clyde"
+    },
+    {
+     "name": "Gloucester",
+     "sea": "Bristol Channel",
+     "km": 63.8,
+     "route": "River Severn (Afon Hafren)"
+    },
+    {
+     "name": "Hereford",
+     "sea": "Bristol Channel",
+     "km": 108.6,
+     "route": "River Wye (Afon Gwy)"
+    },
+    {
+     "name": "Inverness",
+     "sea": "North Sea",
+     "km": 3.1,
+     "route": "River Ness"
+    },
+    {
+     "name": "Kingston upon Hull",
+     "sea": "North Sea",
+     "km": 1.5,
+     "route": ""
+    },
+    {
+     "name": "Lancaster",
+     "sea": "Irish Sea",
+     "km": 10.5,
+     "route": "River Lune"
+    },
+    {
+     "name": "Leeds",
+     "sea": "North Sea",
+     "km": 84.0,
+     "route": "River Aire > River Ouse"
+    },
+    {
+     "name": "Leicester",
+     "sea": "North Sea",
+     "km": 184.0,
+     "route": "River Soar > River Trent"
+    },
+    {
+     "name": "Lichfield",
+     "sea": "North Sea",
+     "km": 202.7,
+     "route": "Curborough Brook > Pyford Brook > River Trent"
+    },
+    {
+     "name": "Lincoln",
+     "sea": "North Sea",
+     "km": 65.1,
+     "route": "River Witham > The Haven"
+    },
+    {
+     "name": "Liverpool",
+     "sea": "Irish Sea",
+     "km": 1.8,
+     "route": ""
+    },
+    {
+     "name": "London",
+     "sea": "North Sea",
+     "km": 41.7,
+     "route": "River Thames"
+    },
+    {
+     "name": "Manchester",
+     "sea": "Irish Sea",
+     "km": 52.7,
+     "route": "River Irwell > River Mersey"
+    },
+    {
+     "name": "Milton Keynes",
+     "sea": "North Sea",
+     "km": 156.9,
+     "route": "River Great Ouse > Hundred Foot Drain"
+    },
+    {
+     "name": "Newcastle upon Tyne",
+     "sea": "North Sea",
+     "km": 18.0,
+     "route": "River Tyne"
+    },
+    {
+     "name": "Norwich",
+     "sea": "North Sea",
+     "km": 39.4,
+     "route": "River Wensum > River Yare"
+    },
+    {
+     "name": "Nottingham",
+     "sea": "North Sea",
+     "km": 131.4,
+     "route": "River Trent"
+    },
+    {
+     "name": "Oxford",
+     "sea": "North Sea",
+     "km": 224.9,
+     "route": "River Thames"
+    },
+    {
+     "name": "Perth",
+     "sea": "North Sea",
+     "km": 15.8,
+     "route": "River Tay"
+    },
+    {
+     "name": "Peterborough",
+     "sea": "North Sea",
+     "km": 6.5,
+     "route": "River Nene"
+    },
+    {
+     "name": "Plymouth",
+     "sea": "English Channel",
+     "km": 2.7,
+     "route": ""
+    },
+    {
+     "name": "Portsmouth",
+     "sea": "English Channel",
+     "km": 1.7,
+     "route": ""
+    },
+    {
+     "name": "Preston",
+     "sea": "Irish Sea",
+     "km": 17.1,
+     "route": "River Ribble"
+    },
+    {
+     "name": "Ripon",
+     "sea": "North Sea",
+     "km": 116.9,
+     "route": "River Skell > River Ure > River Ouse"
+    },
+    {
+     "name": "Salford",
+     "sea": "Irish Sea",
+     "km": 48.4,
+     "route": "River Mersey"
+    },
+    {
+     "name": "Salisbury",
+     "sea": "English Channel",
+     "km": 52.3,
+     "route": "River Avon > River Stour"
+    },
+    {
+     "name": "Sheffield",
+     "sea": "North Sea",
+     "km": 82.9,
+     "route": "River Don > Dutch River > River Ouse"
+    },
+    {
+     "name": "Southampton",
+     "sea": "English Channel",
+     "km": 5.4,
+     "route": "River Test"
+    },
+    {
+     "name": "Southend-on-Sea",
+     "sea": "North Sea",
+     "km": 2.6,
+     "route": ""
+    },
+    {
+     "name": "St Albans",
+     "sea": "North Sea",
+     "km": 147.3,
+     "route": "River Ver > River Colne > River Thames"
+    },
+    {
+     "name": "St Asaph",
+     "sea": "Irish Sea",
+     "km": 8.9,
+     "route": "River Elwy (Afon Elwy) > River Clwyd (Afon Clwyd)"
+    },
+    {
+     "name": "Stirling",
+     "sea": "North Sea",
+     "km": 21.9,
+     "route": "River Forth"
+    },
+    {
+     "name": "Stoke-on-Trent",
+     "sea": "North Sea",
+     "km": 250.6,
+     "route": "River Trent"
+    },
+    {
+     "name": "Sunderland",
+     "sea": "North Sea",
+     "km": 2.8,
+     "route": ""
+    },
+    {
+     "name": "Truro",
+     "sea": "English Channel",
+     "km": 15.0,
+     "route": "River Fal"
+    },
+    {
+     "name": "Tyddewi",
+     "sea": "Celtic Sea",
+     "km": 3.8,
+     "route": "River Alun"
+    },
+    {
+     "name": "Wakefield",
+     "sea": "North Sea",
+     "km": 81.8,
+     "route": "River Calder > River Aire > River Ouse"
+    },
+    {
+     "name": "Wells",
+     "sea": "Bristol Channel",
+     "km": 32.1,
+     "route": "River Sheppey > River Brue"
+    },
+    {
+     "name": "Winchester",
+     "sea": "English Channel",
+     "km": 27.0,
+     "route": "River Itchen"
+    },
+    {
+     "name": "Wolverhampton",
+     "sea": "Bristol Channel",
+     "km": 173.9,
+     "route": "Smestow Brook > River Stour > River Severn (Afon Hafren)"
+    },
+    {
+     "name": "Worcester",
+     "sea": "Bristol Channel",
+     "km": 109.9,
+     "route": "River Severn (Afon Hafren)"
+    },
+    {
+     "name": "Wrexham",
+     "sea": "Irish Sea",
+     "km": 56.9,
+     "route": "River Gwenfro (Afon Gwenfro) > River Clywedog (Afon Clywedog) > River Dee (Afon Dyfrdwy)"
+    },
+    {
+     "name": "York",
+     "sea": "North Sea",
+     "km": 72.2,
+     "route": "River Ouse"
+    }
+   ]
+  },
+  "longest_gb": [
+   {
+    "sea": "Bristol Channel",
+    "km": 325.8,
+    "lat": 52.5438,
+    "lon": -3.7202,
+    "near": "Dylife",
+    "route": "Afon Clywedog > River Severn (Afon Hafren)"
+   },
+   {
+    "sea": "North Sea",
+    "km": 323.0,
+    "lat": 51.8315,
+    "lon": -2.0998,
+    "near": "Birdlip",
+    "route": "River Churn > River Thames"
+   },
+   {
+    "sea": "Inner Seas (west Scotland)",
+    "km": 147.8,
+    "lat": 55.2862,
+    "lon": -3.5939,
+    "near": "Stanshielrig",
+    "route": "Crook Burn > Daer Water > River Clyde"
+   },
+   {
+    "sea": "Irish Sea",
+    "km": 142.5,
+    "lat": 52.9197,
+    "lon": -3.745,
+    "near": "Llidiardau",
+    "route": "Afon Amnodd-bwll > Afon Tryweryn > River Dee (Afon Dyfrdwy)"
+   },
+   {
+    "sea": "English Channel",
+    "km": 110.2,
+    "lat": 51.3778,
+    "lon": -1.9899,
+    "near": "Roundway",
+    "route": "Etchilhampton Water > River Avon > River Stour"
+   },
+   {
+    "sea": "Atlantic Ocean",
+    "km": 63.2,
+    "lat": 58.2914,
+    "lon": -3.8329,
+    "near": "Lochside",
+    "route": "Glutt Water > River Thurso"
+   },
+   {
+    "sea": "Celtic Sea",
+    "km": 58.5,
+    "lat": 51.9299,
+    "lon": -5.143,
+    "near": "Mesur-y-dorth",
+    "route": "Western Cleddau"
+   }
+  ],
+  "thames_head_contrast": {
+   "km_west": 0.2,
+   "sea": "Bristol Channel",
+   "path_km": 82.7,
+   "route": "Norman's Brook > Hatherley Brook > River Severn (Afon Hafren)"
+  },
+  "severn_thames_start_km": 135.9201674850264,
+  "gb_dist_median_km": 40.29999923706055,
+  "gb_dist_mean_km": 61.33968734741211,
+  "gb_share_within_10km": 0.1994226188360618,
+  "gb_share_over_100km": 0.2119052757154191,
+  "river_systems_top": [
+   {
+    "name": "River Thames",
+    "sea": "North Sea",
+    "km2": 13457.0
+   },
+   {
+    "name": "River Severn (Afon Hafren)",
+    "sea": "Bristol Channel",
+    "km2": 11349.0
+   },
+   {
+    "name": "River Ouse",
+    "sea": "North Sea",
+    "km2": 10595.0
+   },
+   {
+    "name": "River Trent",
+    "sea": "North Sea",
+    "km2": 10413.0
+   },
+   {
+    "name": "River Tay",
+    "sea": "North Sea",
+    "km2": 5035.0
+   },
+   {
+    "name": "River Tweed",
+    "sea": "North Sea",
+    "km2": 5007.0
+   },
+   {
+    "name": "River Wye (Afon Gwy)",
+    "sea": "Bristol Channel",
+    "km2": 4132.0
+   },
+   {
+    "name": "River Mersey",
+    "sea": "Irish Sea",
+    "km2": 3905.0
+   },
+   {
+    "name": "River Great Ouse",
+    "sea": "North Sea",
+    "km2": 3399.0
+   },
+   {
+    "name": "Hundred Foot Drain",
+    "sea": "North Sea",
+    "km2": 3164.0
+   },
+   {
+    "name": "The Haven",
+    "sea": "North Sea",
+    "km2": 3086.0
+   },
+   {
+    "name": "River Clyde",
+    "sea": "Inner Seas (west Scotland)",
+    "km2": 2996.0
+   },
+   {
+    "name": "River Stour",
+    "sea": "English Channel",
+    "km2": 2965.0
+   },
+   {
+    "name": "River Spey",
+    "sea": "North Sea",
+    "km2": 2935.0
+   },
+   {
+    "name": "River Tyne",
+    "sea": "North Sea",
+    "km2": 2801.0
+   }
+  ],
+  "gb_divide_km_all": 4357.582901813391,
+  "gb_north_sea_divide_km": 2657.518299369142,
+  "north_sea_divide_points": {
+   "lowest": {
+    "elev_m": 31.0,
+    "lat": 58.536,
+    "lon": -3.3687,
+    "near": "Durran",
+    "county": "Highland",
+    "hill": "Corsback Hill",
+    "hill_km": 1.3
+   },
+   "highest": {
+    "elev_m": 1119.0,
+    "lat": 56.8122,
+    "lon": -4.4673,
+    "near": "Killichonan",
+    "county": "Perth and Kinross",
+    "hill": "Ben Alder",
+    "hill_km": 0.2
+   }
+  },
+  "ns_divide_cells": 23041,
+  "ns_divide_share_below_100m": 0.05234147823445163,
+  "gb_triple_points": [
+   {
+    "rivers": "Inner Seas (west Scotland): Allt a' Chuilinn > River Laxford | Atlantic Ocean: Abhainn Srath Coir' an Easaidh > Strathmore River > River Hope | North Sea: Allt Beithe > River Shin > Kyle of Sutherland",
+    "lat": 58.3059,
+    "lon": -4.7832,
+    "elev_m": 709.0,
+    "seas": "Inner Seas (west Scotland) | Atlantic Ocean | North Sea",
+    "nearest_hill": "Càrn Dearg",
+    "hill_km": 0.7,
+    "nearest_place": "Kinloch",
+    "county": "Highland",
+    "nation": "Scotland"
+   },
+   {
+    "rivers": "Irish Sea: Fopperbeck Burn > Evan Water > River Annan | Inner Seas (west Scotland): East Water > Midlock Water > River Clyde | North Sea: Badlieu Burn > River Tweed",
+    "lat": 55.436,
+    "lon": -3.539,
+    "elev_m": 519.0,
+    "seas": "Irish Sea | Inner Seas (west Scotland) | North Sea",
+    "nearest_hill": "Clyde Law",
+    "hill_km": 0.2,
+    "nearest_place": "Elvanfoot",
+    "county": "South Lanarkshire",
+    "nation": "Scotland"
+   },
+   {
+    "rivers": "Bristol Channel: River Tern > River Severn (Afon Hafren) | Irish Sea: River Lea > Checkley Brook > River Weaver | North Sea: Meece Brook > River Sow > River Trent",
+    "lat": 52.9644,
+    "lon": -2.3332,
+    "elev_m": 179.0,
+    "seas": "Bristol Channel | Irish Sea | North Sea",
+    "nearest_hill": "Swallow Hill",
+    "hill_km": 0.3,
+    "nearest_place": "Madeley Park",
+    "county": "Staffordshire",
+    "nation": "England"
+   },
+   {
+    "rivers": "Bristol Channel: Afon Gafel > River Taf (Afon Taf) | Irish Sea: Afon Bannon > Afon Nyfer | Celtic Sea: Eastern Cleddau",
+    "lat": 51.962,
+    "lon": -4.6623,
+    "elev_m": 304.0,
+    "seas": "Bristol Channel | Irish Sea | Celtic Sea",
+    "nearest_hill": "Crug-yr-hwch",
+    "hill_km": 0.3,
+    "nearest_place": "Crymych",
+    "county": "Sir Benfro - Pembrokeshire",
+    "nation": "Wales"
+   },
+   {
+    "rivers": "Bristol Channel: River Marden > River Avon | English Channel: Etchilhampton Water > River Avon > River Stour | North Sea: River Kennet > River Thames",
+    "lat": 51.4018,
+    "lon": -1.9569,
+    "elev_m": 250.0,
+    "seas": "Bristol Channel | English Channel | North Sea",
+    "nearest_hill": "Furze Knoll",
+    "hill_km": 0.3,
+    "nearest_place": "Calstone Wellington",
+    "county": "Wiltshire",
+    "nation": "England"
+   },
+   {
+    "rivers": "Bristol Channel: River Torridge | English Channel: Lamberal Water > River Tamar",
+    "lat": 50.9247,
+    "lon": -4.4701,
+    "elev_m": 212.0,
+    "seas": "Bristol Channel | Celtic Sea | English Channel",
+    "nearest_hill": "Henna Cliff",
+    "hill_km": 6.1,
+    "nearest_place": "Woolley",
+    "county": "Cornwall",
+    "nation": "England"
+   }
+  ],
+  "network_bifurcations_to_different_seas": 1,
+  "validation": {
+   "network": {
+    "links": 191464,
+    "links_routed": 177240,
+    "km_routed": 138242.396,
+    "km_all": 149805.61,
+    "agree_km": 137906.607,
+    "disagree_km": 196.2,
+    "agree_share": 0.9985793192458428,
+    "top_confusions": [
+     [
+      "Inner Seas off the West Coast of Scotland -> North Atlantic Ocean",
+      113.59800000000006
+     ],
+     [
+      "North Atlantic Ocean -> North Sea",
+      32.475000000000016
+     ],
+     [
+      "English Channel -> Celtic Sea",
+      16.691999999999997
+     ],
+     [
+      "North Sea -> North Atlantic Ocean",
+      13.278999999999996
+     ],
+     [
+      "Inner Seas off the West Coast of Scotland -> North Sea",
+      9.532
+     ],
+     [
+      "North Sea -> Irish Sea and St. George's Channel",
+      5.2620000000000005
+     ],
+     [
+      "North Atlantic Ocean -> Inner Seas off the West Coast of Scotland",
+      2.8379999999999996
+     ],
+     [
+      "Irish Sea and St. George's Channel -> Celtic Sea",
+      1.222
+     ]
+    ]
+   },
+   "hydrobasins_great_britain": {
+    "km2_compared": 233100.79850701982,
+    "agree_share": 0.9898469246704151,
+    "top_differences": [
+     [
+      "Bristol Channel (HydroBASINS) vs Celtic Sea (this map)",
+      716
+     ],
+     [
+      "Inner Seas off the West Coast of Scotland (HydroBASINS) vs North Atlantic Ocean (this map)",
+      196
+     ],
+     [
+      "North Atlantic Ocean (HydroBASINS) vs North Sea (this map)",
+      173
+     ],
+     [
+      "Inner Seas off the West Coast of Scotland (HydroBASINS) vs North Sea (this map)",
+      169
+     ],
+     [
+      "English Channel (HydroBASINS) vs North Sea (this map)",
+      130
+     ],
+     [
+      "North Sea (HydroBASINS) vs North Atlantic Ocean (this map)",
+      107
+     ]
+    ]
+   },
+   "hydrobasins_ireland": {
+    "km2_compared": 85279.29791713548,
+    "agree_share": 0.9813236927321574,
+    "top_differences": [
+     [
+      "Irish Sea and St. George's Channel (HydroBASINS) vs Celtic Sea (this map)",
+      632
+     ],
+     [
+      "Irish Sea and St. George's Channel (HydroBASINS) vs Inner Seas off the West Coast of Scotland (this map)",
+      365
+     ],
+     [
+      "Inner Seas off the West Coast of Scotland (HydroBASINS) vs North Atlantic Ocean (this map)",
+      198
+     ],
+     [
+      "North Atlantic Ocean (HydroBASINS) vs Celtic Sea (this map)",
+      111
+     ],
+     [
+      "Celtic Sea (HydroBASINS) vs North Atlantic Ocean (this map)",
+      87
+     ],
+     [
+      "Inner Seas off the West Coast of Scotland (HydroBASINS) vs Irish Sea and St. George's Channel (this map)",
+      66
+     ]
+    ]
+   }
+  },
+  "meta": {
+   "grid_cells_gb": 7519357,
+   "grid_cells_ireland": 2635733,
+   "cell_m_median": 172.3992406109469,
+   "os_links": 191464,
+   "name_chains": 12495
+  }
+ },
+ "world": {
+  "land_km2": 134920474.39665675,
+  "ocean_share": {
+   "Atlantic": {
+    "km2": 45193623.34516225,
+    "share": 0.3349649009704499
+   },
+   "Pacific": {
+    "km2": 19308421.22944297,
+    "share": 0.14310964526167883
+   },
+   "Indian": {
+    "km2": 16345469.577495646,
+    "share": 0.12114891865441496
+   },
+   "Arctic": {
+    "km2": 22178332.678993538,
+    "share": 0.16438077896013611
+   },
+   "Southern": {
+    "km2": 0.0,
+    "share": 0.0
+   },
+   "Inland (no outlet to the sea)": {
+    "km2": 31894627.565562353,
+    "share": 0.2363957561533202
+   }
+  },
+  "seas_top": [
+   {
+    "sea": "South Atlantic Ocean",
+    "ocean": "Atlantic",
+    "km2": 15864432,
+    "share": 0.11758
+   },
+   {
+    "sea": "Kara Sea",
+    "ocean": "Arctic",
+    "km2": 6083840,
+    "share": 0.04509
+   },
+   {
+    "sea": "Gulf of Mexico",
+    "ocean": "Atlantic",
+    "km2": 5002405,
+    "share": 0.03708
+   },
+   {
+    "sea": "North Atlantic Ocean",
+    "ocean": "Atlantic",
+    "km2": 4554713,
+    "share": 0.03376
+   },
+   {
+    "sea": "Laptev Sea",
+    "ocean": "Arctic",
+    "km2": 3607744,
+    "share": 0.02674
+   },
+   {
+    "sea": "Gulf of Guinea",
+    "ocean": "Atlantic",
+    "km2": 3475839,
+    "share": 0.02576
+   },
+   {
+    "sea": "Mediterranean Sea - Eastern Basin",
+    "ocean": "Atlantic",
+    "km2": 3334287,
+    "share": 0.02471
+   },
+   {
+    "sea": "Hudson Bay",
+    "ocean": "Arctic",
+    "km2": 3196988,
+    "share": 0.0237
+   },
+   {
+    "sea": "Indian Ocean",
+    "ocean": "Indian",
+    "km2": 3172674,
+    "share": 0.02352
+   },
+   {
+    "sea": "Rio de La Plata",
+    "ocean": "Atlantic",
+    "km2": 3091003,
+    "share": 0.02291
+   },
+   {
+    "sea": "Bay of Bengal",
+    "ocean": "Indian",
+    "km2": 2952181,
+    "share": 0.02188
+   },
+   {
+    "sea": "Mozambique Channel",
+    "ocean": "Indian",
+    "km2": 2786315,
+    "share": 0.02065
+   },
+   {
+    "sea": "Sea of Okhotsk",
+    "ocean": "Pacific",
+    "km2": 2727807,
+    "share": 0.02022
+   },
+   {
+    "sea": "South China Sea",
+    "ocean": "Pacific",
+    "km2": 2443610,
+    "share": 0.01811
+   },
+   {
+    "sea": "Eastern China Sea",
+    "ocean": "Pacific",
+    "km2": 2158343,
+    "share": 0.016
+   }
+  ],
+  "n_seas_receiving": 100,
+  "longest_by_ocean": [
+   {
+    "ocean": "Atlantic",
+    "km": 6777,
+    "lat": -2.775,
+    "lon": 30.225,
+    "sea": "Mediterranean Sea - Eastern Basin",
+    "route": "Kagera > Victoria Nile > Albert Nile > Bahr el Jebel > El Bahr el Abyad > Nile > Rosetta Branch",
+    "near_city": "Kirundo (BI)",
+    "near_city_km": 26
+   },
+   {
+    "ocean": "Pacific",
+    "km": 5893,
+    "lat": 33.425,
+    "lon": 90.875,
+    "sea": "Eastern China Sea",
+    "route": "Tuotuo > Tongtian > Jinsha > Chang Jiang > Yangtze",
+    "near_city": "Guōlèmùdé (CN)",
+    "near_city_km": 491
+   },
+   {
+    "ocean": "Indian",
+    "km": 3320,
+    "lat": 30.525,
+    "lon": 82.025,
+    "sea": "Bay of Bengal",
+    "route": "Maquan > Yarlung > Dihang > Brahmaputra",
+    "near_city": "Dārchulā (NP)",
+    "near_city_km": 161
+   },
+   {
+    "ocean": "Arctic",
+    "km": 5388,
+    "lat": 47.875,
+    "lon": 90.125,
+    "sea": "Kara Sea",
+    "route": "Ertix > Ertis > Irtysh > Ob",
+    "near_city": "Khovd (MN)",
+    "near_city_km": 114
+   },
+   {
+    "ocean": "Inland (no outlet to the sea)",
+    "km": 3755,
+    "lat": 53.625,
+    "lon": 38.125,
+    "sea": "inland",
+    "route": "Oka > Volga",
+    "near_city": "Bogoroditsk (RU)",
+    "near_city_km": 16
+   }
+  ],
+  "world_dist_median_km": 651.5115966796875,
+  "world_share_over_1000km": 0.458771549016172,
+  "inland_top": [
+   {
+    "km2": 2396419,
+    "sink_lat": 41.7,
+    "sink_lon": 50.7,
+    "lake": "Caspian Sea",
+    "country": "",
+    "rivers": "Volga | Oka | Ural | Vyatka"
+   },
+   {
+    "km2": 977319,
+    "sink_lat": 13.077,
+    "sink_lon": 14.527,
+    "lake": "Chad",
+    "country": "Chad",
+    "rivers": "Chari | Ouham | Logone | Hadejia"
+   },
+   {
+    "km2": 906362,
+    "sink_lat": 40.202,
+    "sink_lon": 90.373,
+    "lake": "",
+    "country": "China",
+    "rivers": "Yarkant | Tarim | Toxkan | Yurungkax"
+   },
+   {
+    "km2": 752296,
+    "sink_lat": -28.427,
+    "sink_lon": 137.206,
+    "lake": "Eyre North",
+    "country": "Australia",
+    "rivers": ""
+   },
+   {
+    "km2": 644830,
+    "sink_lat": -20.94,
+    "sink_lon": 25.952,
+    "lake": "",
+    "country": "Botswana",
+    "rivers": "Cubango | Okavango | Cuito"
+   },
+   {
+    "km2": 623374,
+    "sink_lat": 44.906,
+    "sink_lon": 59.715,
+    "lake": "",
+    "country": "Uzbekistan",
+    "rivers": "Amu Darya | Panj | Zarafshon | Pamir"
+   },
+   {
+    "km2": 450874,
+    "sink_lat": 16.973,
+    "sink_lon": 17.881,
+    "lake": "",
+    "country": "Chad",
+    "rivers": ""
+   },
+   {
+    "km2": 405021,
+    "sink_lat": 46.385,
+    "sink_lon": 74.602,
+    "lake": "Balkhash",
+    "country": "Kazakhstan",
+    "rivers": "Ile | Künes"
+   },
+   {
+    "km2": 325453,
+    "sink_lat": 46.335,
+    "sink_lon": 60.952,
+    "lake": "North Aral Sea",
+    "country": "Kazakhstan",
+    "rivers": "Syr Darya | Naryn"
+   },
+   {
+    "km2": 308719,
+    "sink_lat": 30.131,
+    "sink_lon": 20.848,
+    "lake": "",
+    "country": "Libya",
+    "rivers": ""
+   },
+   {
+    "km2": 281779,
+    "sink_lat": 39.36,
+    "sink_lon": 55.381,
+    "lake": "",
+    "country": "Turkmenistan",
+    "rivers": "Harirud"
+   },
+   {
+    "km2": 236946,
+    "sink_lat": 23.252,
+    "sink_lon": 49.269,
+    "lake": "",
+    "country": "Saudi Arabia",
+    "rivers": ""
+   },
+   {
+    "km2": 211672,
+    "sink_lat": 18.752,
+    "sink_lon": 11.735,
+    "lake": "",
+    "country": "Niger",
+    "rivers": ""
+   },
+   {
+    "km2": 204704,
+    "sink_lat": 31.49,
+    "sink_lon": 61.752,
+    "lake": "",
+    "country": "Afghanistan",
+    "rivers": "Helmand"
+   },
+   {
+    "km2": 196183,
+    "sink_lat": 21.402,
+    "sink_lon": 52.977,
+    "lake": "",
+    "country": "Saudi Arabia",
+    "rivers": ""
+   }
+  ],
+  "n_inland_basins": 4091,
+  "triple_rule_small_inland_km2": 10000,
+  "triple_points_n": 27,
+  "triple_points_ocean_only_n": 1,
+  "triple_points_ocean_only": [
+   {
+    "lat": 48.6,
+    "lon": -113.5,
+    "oceans": "Atlantic | Pacific | Arctic",
+    "n": 3,
+    "inland": false,
+    "country": "United States of America",
+    "near_city": "Cranbrook (CA)",
+    "near_city_km": 193
+   }
+  ],
+  "countries_n": 175,
+  "countries_most_seas": [
+   {
+    "country": "Indonesia",
+    "n_seas": 17,
+    "n_oceans": 2
+   },
+   {
+    "country": "Russia",
+    "n_seas": 12,
+    "n_oceans": 3
+   },
+   {
+    "country": "Canada",
+    "n_seas": 12,
+    "n_oceans": 3
+   },
+   {
+    "country": "United States of America",
+    "n_seas": 11,
+    "n_oceans": 3
+   },
+   {
+    "country": "China",
+    "n_seas": 8,
+    "n_oceans": 3
+   },
+   {
+    "country": "Norway",
+    "n_seas": 8,
+    "n_oceans": 2
+   },
+   {
+    "country": "Australia",
+    "n_seas": 7,
+    "n_oceans": 2
+   },
+   {
+    "country": "United Kingdom",
+    "n_seas": 7,
+    "n_oceans": 1
+   }
+  ],
+  "countries_all_inland": [
+   {
+    "country": "Turkmenistan",
+    "km2": 469808
+   },
+   {
+    "country": "Uzbekistan",
+    "km2": 446047
+   },
+   {
+    "country": "Kyrgyzstan",
+    "km2": 198793
+   },
+   {
+    "country": "Tajikistan",
+    "km2": 142379
+   },
+   {
+    "country": "Azerbaijan",
+    "km2": 85696
+   },
+   {
+    "country": "Armenia",
+    "km2": 29544
+   },
+   {
+    "country": "Baikonur",
+    "km2": 6573
+   }
+  ],
+  "countries_four_oceans": [],
+  "countries_mostly_inland": [
+   {
+    "country": "Kyrgyzstan",
+    "inland_share": 1.0
+   },
+   {
+    "country": "Uzbekistan",
+    "inland_share": 1.0
+   },
+   {
+    "country": "Turkmenistan",
+    "inland_share": 1.0
+   },
+   {
+    "country": "Tajikistan",
+    "inland_share": 1.0
+   },
+   {
+    "country": "Azerbaijan",
+    "inland_share": 1.0
+   },
+   {
+    "country": "Baikonur",
+    "inland_share": 1.0
+   },
+   {
+    "country": "Armenia",
+    "inland_share": 1.0
+   },
+   {
+    "country": "Chad",
+    "inland_share": 0.9815
+   },
+   {
+    "country": "Libya",
+    "inland_share": 0.9468
+   },
+   {
+    "country": "Jordan",
+    "inland_share": 0.9289
+   },
+   {
+    "country": "Afghanistan",
+    "inland_share": 0.8906
+   },
+   {
+    "country": "Algeria",
+    "inland_share": 0.8687
+   },
+   {
+    "country": "Kazakhstan",
+    "inland_share": 0.8542
+   },
+   {
+    "country": "Saudi Arabia",
+    "inland_share": 0.8026
+   },
+   {
+    "country": "Mauritania",
+    "inland_share": 0.7476
+   },
+   {
+    "country": "Iran",
+    "inland_share": 0.7426
+   },
+   {
+    "country": "Mongolia",
+    "inland_share": 0.7103
+   },
+   {
+    "country": "Egypt",
+    "inland_share": 0.6038
+   },
+   {
+    "country": "Oman",
+    "inland_share": 0.6038
+   },
+   {
+    "country": "W. Sahara",
+    "inland_share": 0.5972
+   },
+   {
+    "country": "Botswana",
+    "inland_share": 0.5965
+   },
+   {
+    "country": "Niger",
+    "inland_share": 0.5916
+   },
+   {
+    "country": "Georgia",
+    "inland_share": 0.5387
+   },
+   {
+    "country": "Yemen",
+    "inland_share": 0.5326
+   },
+   {
+    "country": "Australia",
+    "inland_share": 0.5286
+   },
+   {
+    "country": "Djibouti",
+    "inland_share": 0.519
+   },
+   {
+    "country": "Tunisia",
+    "inland_share": 0.5093
+   }
+  ],
+  "cities_n": 34146,
+  "city_pop_share_by_ocean": {
+   "Pacific": 0.37635757791471275,
+   "Atlantic": 0.3570453992985236,
+   "Indian": 0.187158530274001,
+   "Inland": 0.07086382712386152,
+   "Arctic": 0.008574665388901156
+  },
+  "big_city_examples": [
+   {
+    "name": "Shanghai",
+    "cc": "CN",
+    "pop": 24874500,
+    "ocean": "Pacific",
+    "sea": "Eastern China Sea",
+    "dist_km": 23,
+    "route": ""
+   },
+   {
+    "name": "Chongqing",
+    "cc": "CN",
+    "pop": 22000000,
+    "ocean": "Pacific",
+    "sea": "Eastern China Sea",
+    "dist_km": 2188,
+    "route": "Jialing > Chang Jiang > Yangtze"
+   },
+   {
+    "name": "Chengdu",
+    "cc": "CN",
+    "pop": 20937757,
+    "ocean": "Pacific",
+    "sea": "Eastern China Sea",
+    "dist_km": 2863,
+    "route": "Min > Chang Jiang > Yangtze"
+   },
+   {
+    "name": "Beijing",
+    "cc": "CN",
+    "pop": 18960744,
+    "ocean": "Pacific",
+    "sea": "Yellow Sea",
+    "dist_km": 181,
+    "route": "Yongding > Hai"
+   },
+   {
+    "name": "Guangzhou",
+    "cc": "CN",
+    "pop": 18676605,
+    "ocean": "Pacific",
+    "sea": "South China Sea",
+    "dist_km": 21,
+    "route": ""
+   },
+   {
+    "name": "Shenzhen",
+    "cc": "CN",
+    "pop": 17494398,
+    "ocean": "Pacific",
+    "sea": "South China Sea",
+    "dist_km": 12,
+    "route": ""
+   },
+   {
+    "name": "Kinshasa",
+    "cc": "CD",
+    "pop": 16000000,
+    "ocean": "Atlantic",
+    "sea": "South Atlantic Ocean",
+    "dist_km": 510,
+    "route": "Congo"
+   },
+   {
+    "name": "Istanbul",
+    "cc": "TR",
+    "pop": 15701602,
+    "ocean": "Atlantic",
+    "sea": "Sea of Marmara",
+    "dist_km": 6,
+    "route": ""
+   },
+   {
+    "name": "Lagos",
+    "cc": "NG",
+    "pop": 15388000,
+    "ocean": "Atlantic",
+    "sea": "Gulf of Guinea",
+    "dist_km": 8,
+    "route": ""
+   },
+   {
+    "name": "Ho Chi Minh City",
+    "cc": "VN",
+    "pop": 14002598,
+    "ocean": "Pacific",
+    "sea": "South China Sea",
+    "dist_km": 39,
+    "route": ""
+   },
+   {
+    "name": "Tianjin",
+    "cc": "CN",
+    "pop": 13866009,
+    "ocean": "Pacific",
+    "sea": "Yellow Sea",
+    "dist_km": 49,
+    "route": "Hai"
+   },
+   {
+    "name": "Wuhan",
+    "cc": "CN",
+    "pop": 13739000,
+    "ocean": "Pacific",
+    "sea": "Eastern China Sea",
+    "dist_km": 903,
+    "route": "Han > Yangtze"
+   },
+   {
+    "name": "Lahore",
+    "cc": "PK",
+    "pop": 13004135,
+    "ocean": "Indian",
+    "sea": "Arabian Sea",
+    "dist_km": 1635,
+    "route": "Ravi > Chenab > Indus"
+   },
+   {
+    "name": "Xi’an",
+    "cc": "CN",
+    "pop": 12952907,
+    "ocean": "Pacific",
+    "sea": "Yellow Sea",
+    "dist_km": 1383,
+    "route": "Wei > Huang"
+   },
+   {
+    "name": "Mumbai",
+    "cc": "IN",
+    "pop": 12691836,
+    "ocean": "Indian",
+    "sea": "Arabian Sea",
+    "dist_km": 8,
+    "route": ""
+   },
+   {
+    "name": "São Paulo",
+    "cc": "BR",
+    "pop": 12400232,
+    "ocean": "Atlantic",
+    "sea": "Rio de La Plata",
+    "dist_km": 3346,
+    "route": "Tietê > Paraná"
+   },
+   {
+    "name": "Mexico City",
+    "cc": "MX",
+    "pop": 12294193,
+    "ocean": "Inland",
+    "sea": "Inland",
+    "dist_km": 17,
+    "route": ""
+   },
+   {
+    "name": "Hangzhou",
+    "cc": "CN",
+    "pop": 11936010,
+    "ocean": "Pacific",
+    "sea": "Eastern China Sea",
+    "dist_km": 273,
+    "route": ""
+   },
+   {
+    "name": "Karachi",
+    "cc": "PK",
+    "pop": 11624219,
+    "ocean": "Indian",
+    "sea": "Arabian Sea",
+    "dist_km": 11,
+    "route": ""
+   },
+   {
+    "name": "Delhi",
+    "cc": "IN",
+    "pop": 11034555,
+    "ocean": "Indian",
+    "sea": "Bay of Bengal",
+    "dist_km": 2382,
+    "route": "Yamuna > Ganges > Brahmaputra"
+   },
+   {
+    "name": "Moscow",
+    "cc": "RU",
+    "pop": 10381222,
+    "ocean": "Inland",
+    "sea": "Inland",
+    "dist_km": 3294,
+    "route": "Oka > Volga"
+   },
+   {
+    "name": "Dhaka",
+    "cc": "BD",
+    "pop": 10356500,
+    "ocean": "Indian",
+    "sea": "Bay of Bengal",
+    "dist_km": 81,
+    "route": ""
+   },
+   {
+    "name": "Seoul",
+    "cc": "KR",
+    "pop": 10349312,
+    "ocean": "Pacific",
+    "sea": "Yellow Sea",
+    "dist_km": 17,
+    "route": "Han"
+   },
+   {
+    "name": "Harbin",
+    "cc": "CN",
+    "pop": 10009854,
+    "ocean": "Pacific",
+    "sea": "Sea of Okhotsk",
+    "dist_km": 1873,
+    "route": "Songhua > Amur"
+   },
+   {
+    "name": "Tokyo",
+    "cc": "JP",
+    "pop": 9733276,
+    "ocean": "Pacific",
+    "sea": "North Pacific Ocean",
+    "dist_km": 18,
+    "route": ""
+   },
+   {
+    "name": "Dongguan",
+    "cc": "CN",
+    "pop": 9644871,
+    "ocean": "Pacific",
+    "sea": "South China Sea",
+    "dist_km": 26,
+    "route": ""
+   },
+   {
+    "name": "Cairo",
+    "cc": "EG",
+    "pop": 9606916,
+    "ocean": "Atlantic",
+    "sea": "Mediterranean Sea - Eastern Basin",
+    "dist_km": 219,
+    "route": "Rosetta Branch"
+   },
+   {
+    "name": "Hefei",
+    "cc": "CN",
+    "pop": 9465881,
+    "ocean": "Pacific",
+    "sea": "Eastern China Sea",
+    "dist_km": 410,
+    "route": "Yangtze"
+   },
+   {
+    "name": "Johannesburg",
+    "cc": "ZA",
+    "pop": 9418183,
+    "ocean": "Atlantic",
+    "sea": "South Atlantic Ocean",
+    "dist_km": 2158,
+    "route": "Vaal > Orange"
+   },
+   {
+    "name": "Weifang",
+    "cc": "CN",
+    "pop": 9386705,
+    "ocean": "Pacific",
+    "sea": "Yellow Sea",
+    "dist_km": 41,
+    "route": ""
+   }
+  ]
+ },
+ "derived": {
+  "gb_ns_share": 0.4984,
+  "gb_west_share": 0.42010000000000003,
+  "gb_channel_share": 0.0815,
+  "severn_km": 325.8,
+  "thames_km": 323.0,
+  "world_inland_share": 0.2363957561533202,
+  "world_atlantic_share": 0.3349649009704499,
+  "nile_km": 6777,
+  "net_agree": 0.9985793192458428,
+  "hb_gb": 0.9898469246704151,
+  "hb_ie": 0.9813236927321574,
+  "moscow_km": 3294
+ },
+ "meta": {
+  "doi": "10.5281/zenodo.23757700",
+  "url": "https://maps.tristanhotham.com/where-rain-goes/",
+  "repo": "https://github.com/Tristan-Hotham/where-rain-goes",
+  "blog": "https://blog.tristanhotham.com/2026/10/29/where-rain-goes/"
+ }
+}
