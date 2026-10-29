@@ -1,0 +1,149 @@
+<!-- wp:paragraph -->
+<p><em>Every raindrop that lands on Britain runs downhill into one of seven seas. Half of the island drains to the North Sea, Wales sends none of its rain there, and a fifth of the world's land never drains to the sea at all. I followed the rain downhill for every place in Britain, Ireland and the world, and made a map where you can click anywhere to see where yours goes.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/where-rain-goes/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23757700">Read the paper</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p>Stand anywhere when it rains and the water at your feet has already chosen a sea. On the Cotswold edge near Birdlip, a drop can set off down the Churn and the Thames and reach the North Sea {{derived.thames_km|int}} km later. A drop landing {{uk.thames_head_contrast.km_west|f1}} km to the west runs down to the Severn instead and reaches the Bristol Channel after {{uk.thames_head_contrast.path_km|int}} km. The line between them is a watershed. Britain is criss-crossed with them, but they are rarely drawn, so I drew them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For Britain and Ireland I built a model of the land surface in squares about 180 metres across, burned in every river and stream on the Ordnance Survey's open river map, and let the sea "flood" uphill from the coast, so that every square knows which way its water goes and which sea it reaches. For the rest of the world I used HydroBASINS, an atlas of the world's river basins. The seas are the International Hydrographic Organization's official sea areas.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_britain.png|Map of Britain and Ireland coloured by the sea each place drains to: most of eastern Britain blue for the North Sea, the south coast amber for the English Channel, south Wales and the Severn basin purple for the Bristol Channel, north Wales, north-west England and eastern Ireland green for the Irish Sea, western Scotland and most of Northern Ireland red for the Inner Seas, western Ireland and the far north navy for the Atlantic, and south-west Ireland yellow for the Celtic Sea.|Britain and Ireland, coloured by the sea their rain reaches. Black lines are the watersheds between seas.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Half of Britain faces east</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Great Britain's rain reaches seven sea areas. Almost exactly half of the island, {{derived.gb_ns_share|pct1}}, drains east to the North Sea. The western seas together take {{derived.gb_west_share|pct}}: the Irish Sea, the Bristol Channel, the sea lochs and sounds of western Scotland, a corner of the open Atlantic and the Celtic Sea. The English Channel takes {{derived.gb_channel_share|pct}}.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The nations could hardly be more different. {{uk.areas.England.North Sea.share|pct}} of England drains east. Wales sends none of its rain to the North Sea at all: the Severn, the Wye and the Dee all head west, so {{uk.areas.Wales.Bristol Channel.share|pct}} of Wales reaches the Bristol Channel and {{uk.areas.Wales.Irish Sea.share|pct}} the Irish Sea. Scotland splits, half east and a third west. Three quarters of Northern Ireland drains through Lough Neagh and the Bann, or Belfast Lough, into the North Channel, which the IHO counts as part of the "Inner Seas off the West Coast of Scotland".</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_nations.png|Stacked bars showing the share of each nation's land draining to each sea. England 58% North Sea; Scotland 50% North Sea and 36% Inner Seas; Wales 52% Bristol Channel and 43% Irish Sea; Northern Ireland 75% Inner Seas; Ireland 56% Atlantic.|Where each nation's rain goes.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The spine of Britain</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The line that splits North Sea rain from the rest runs from the north coast of Scotland to the Kent coast near Kingsdown, about {{uk.gb_north_sea_divide_km|kms}} km of wriggles on my map. In the Highlands it is a mountain watershed, reaching {{uk.north_sea_divide_points.highest.elev_m|int}} m beside Ben Alder. Only {{uk.ns_divide_share_below_100m|pct}} of it lies below 100 metres.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Some towns sit right on top of a watershed. Of Britain's {{uk.places.n_cities_towns|int}} OS cities and towns, {{uk.places.towns_on_watershed|int}} have their centre on the line. Four of them are in the Black Country: Dudley, Sedgley, Rowley Regis and Blackheath stand on the ridge between the Severn and the Trent, so rain on one side of town heads for the Bristol Channel and rain on the other for the North Sea. The others are Bedworth, Market Drayton and Cumbernauld, which sits between the Forth and the Clyde.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_spine.png|Scatter of the height of every point on the North Sea divide against latitude: low, under 300 m, across southern England and the Midlands, rising through the Pennines to 600 to 900 m in the Southern Uplands and over 1,000 m in the Highlands, then dropping in Caithness.|The height of the North Sea divide, from Kent to the north coast of Scotland.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Where three seas meet</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In a few places three watersheds meet, and a raindrop could set off for any of three seas. I found {{uk.gb_triple_points|len}} on Great Britain. The most striking is Clyde Law in the Southern Uplands, where the first streams of the Clyde run west to the Inner Seas, those of the Tweed east to the North Sea and those of the Annan south to the Irish Sea. The quietest is near Swallow Hill in north Staffordshire, only {{uk.gb_triple_points.2.elev_m|int}} m up, where the Tern heads for the Severn, the Lea for the Weaver and Meece Brook for the Sow and the Trent.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_clyde_law.png|Close-up map of the hills around Clyde Law in South Lanarkshire, shaded red where streams run to the Clyde, blue where they run to the Tweed and green where they run to the Annan, with the three colours meeting at a circled point.|Clyde Law: the land draining to the Clyde (red, Inner Seas), the Tweed (blue, North Sea) and the Annan (green, Irish Sea) meets at one point.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The long way round</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Half of Britain's land is within {{uk.gb_dist_median_km|int}} km of the sea by the route its water takes, but {{uk.gb_share_over_100km|pct}} sends its rain more than 100 km. The longest journey on my map starts near Dylife, under Plynlimon, and runs {{uk.longest_gb.0.km|int}} km down the Severn to the Bristol Channel. The Thames comes a close second, {{uk.longest_gb.1.km|int}} km from that spot near Birdlip. Llanidloes is the town whose rain travels furthest, {{uk.places.farthest_towns.0.km|int}} km, ahead of Cirencester and Swindon. By the land it drains, the Thames is Britain's largest river system on this map ({{uk.river_systems_top.0.km2|int}} km²), ahead of the Severn ({{uk.river_systems_top.1.km2|int}} km²).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_systems.png|Horizontal bar chart of Great Britain's largest river systems by area: Thames, Severn, Ouse, Trent, Tay, Tweed, Wye, Mersey, Great Ouse, Hundred Foot Drain, The Haven and Clyde, coloured by the sea each reaches.|Britain's biggest river systems, by the land draining through each river's mouth.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">The world: a fifth goes nowhere</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Across the world's land, the Atlantic and its seas (the Mediterranean, the Black Sea, the Gulf of Mexico and the rest) take the rain of {{world.ocean_share.Atlantic.share|pct}} of the land. The Arctic takes {{world.ocean_share.Arctic.share|pct}}, mostly through the great Siberian rivers, the Pacific {{world.ocean_share.Pacific.share|pct}} and the Indian Ocean {{world.ocean_share.Indian.share|pct}}. And {{derived.world_inland_share|pct}} drains to no sea at all. Its water ends in lakes and salt pans with no outlet: above all the Caspian, which takes the Volga and with it the rain that falls on Moscow, but also Lake Chad, the Tarim basin, Lake Eyre and the Okavango.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"sizeSlug":"full"} -->
+<figure class="wp-block-image size-full">{{IMG|b_world.png|World map coloured by the ocean each place drains to: blue Atlantic across the Americas east of the Rockies and Andes, Europe and western Africa; purple Arctic across Canada and Siberia; teal Pacific along the American west coast and East Asia; orange Indian Ocean in east Africa, India and Australia; and brown inland basins across the Sahara, Arabia, Central Asia and central Australia.|The world's land by the ocean its rain reaches. Brown basins have no outlet to the sea.}}</figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>The longest journey in the world model is {{derived.nile_km|int}} km, from the hills of Burundi down the Kagera and the Nile to the Mediterranean. And only one spot on my world grid touches the Atlantic, Pacific and Arctic drainages at once: the mountains of Glacier National Park in Montana, home of the famous Triple Divide Peak, which sends water to the Pacific, the Gulf of Mexico and Hudson Bay.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pullquote -->
+<figure class="wp-block-pullquote"><blockquote><p>Rain on Moscow never reaches the sea. It ends in the Caspian, about {{derived.moscow_km|kms}} km away.</p></blockquote></figure>
+<!-- /wp:pullquote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How I did this</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>For Britain and Ireland I used AWS Terrain Tiles for the height of the land, in squares of about 180 m, and burned in every watercourse in OS Open Rivers except canals, deeper for bigger rivers. A "priority flood" then climbs inland from the coast, always taking the lowest square next, and each square inherits the sea of the square it was reached from. That gives the sea, the path, its length and the names of the rivers on the way. Each stretch of coast takes the nearest IHO sea area. For the world I followed the HydroBASINS sub-basins downstream to their outlets or to closed sinks.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I checked Britain two ways: {{derived.net_agree|pct1}} of the watercourse length that the OS river network connects to the sea runs through squares my map sends to the same sea, and the map agrees with HydroBASINS, built from different elevation data, on {{derived.hb_gb|pct}} of Great Britain. It is a model of water flowing over the surface: it ignores water that moves underground through chalk and limestone, pumps in the Fens, canals and reservoirs that move water between valleys. Ireland has no river names on the map, and in the world view many small rivers are not named.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/where-rain-goes/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.23757700">Read the paper</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/Tristan-Hotham/where-rain-goes">Data and code</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Notes and sources</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Rivers and places: <a href="https://www.ordnancesurvey.co.uk/products/os-open-rivers">OS Open Rivers</a> and <a href="https://www.ordnancesurvey.co.uk/products/os-open-names">OS Open Names</a>, contain OS data © Crown copyright and database right 2026 (Open Government Licence v3.0).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Elevation: <a href="https://github.com/tilezen/joerd">AWS Terrain Tiles</a> (Mapzen/Tilezen).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>World basins: <a href="https://www.hydrosheds.org/products/hydrobasins">HydroBASINS</a> (Lehner and Grill 2013). This product incorporates data from the HydroSHEDS version 1 database, © World Wildlife Fund, Inc. (2006 to 2022), used under licence; WWF has not evaluated the data as altered and gives no warranty.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Seas: Flanders Marine Institute, <a href="https://www.marineregions.org/">IHO Sea Areas</a> version 3 (CC BY 4.0). River and lake names for the world: <a href="https://www.naturalearthdata.com/">Natural Earth</a>. Cities: <a href="https://www.geonames.org/">GeoNames</a> (CC BY 4.0).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Paper, data and code: <a href="https://doi.org/10.5281/zenodo.23757700">Zenodo</a> and <a href="https://github.com/Tristan-Hotham/where-rain-goes">GitHub</a>.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->

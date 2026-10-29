@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Where Rain Goes</title>
+<meta name="description" content="Which sea does your rain end up in? Every place in Britain and Ireland, and on the world's land, coloured by the sea its rivers reach, with the path, the distance and the river names for any spot you click.">
+<meta property="og:title" content="Where rain goes: which sea does your rain end up in?">
+<meta property="og:description" content="{{derived.gb_ns_share|pct}} of Great Britain drains to the North Sea. {{derived.world_inland_share|pct}} of the world's land never drains to the sea at all. Click anywhere to follow a raindrop.">
+<meta property="og:image" content="https://maps.tristanhotham.com/where-rain-goes/header.png">
+<meta property="og:url" content="https://maps.tristanhotham.com/where-rain-goes/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+/* Paper, slate and rain blue. */
+:root{
+  --bg:#F3F5F4; --panel:#E6EBEA; --fg:#14202B; --muted:#5B6670; --rule:#D5DCDC; --card:#FBFCFB; --border:#C3CCCD;
+  --rain:#2361A8; --deep:#0F3557; --amber:#C77A1A; --hot:#B8452E; --sea:#E3EAEC; --ctx:#E9ECE8; --ink:#14202B;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121820; --panel:#1C242E; --fg:#E8EEF2; --muted:#9CA8B3; --rule:#2E3944; --card:#18202A; --border:#3C4855;
+  --rain:#6FA8E8; --deep:#A9CBEF; --amber:#E9A24A; --hot:#EE8263; --sea:#18222C; --ctx:#222B34; --ink:#F2F5F7; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121820; --panel:#1C242E; --fg:#E8EEF2; --muted:#9CA8B3; --rule:#2E3944; --card:#18202A; --border:#3C4855;
+  --rain:#6FA8E8; --deep:#A9CBEF; --amber:#E9A24A; --hot:#EE8263; --sea:#18222C; --ctx:#222B34; --ink:#F2F5F7; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 18px/1.62 var(--body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));overflow-x:hidden}
+.wrap{max-width:700px;margin:0 auto;padding-block:28px 64px}
+.wrap .bleed{width:min(1160px,calc(100vw - 32px));margin-left:calc((100% - min(1160px,100vw - 32px))/2);margin-right:0}
+a{color:inherit;text-decoration-color:var(--rain);text-underline-offset:3px}
+.kicker{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.kicker b{background:var(--deep);color:var(--bg);padding:5px 8px;font-weight:500}
+header.hero{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px 24px;align-items:end;border-bottom:6px double var(--fg);padding-bottom:22px;margin-top:18px}
+h1{font:900 clamp(48px,12vw,104px)/.88 var(--display);letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 span{color:var(--rain)}
+.mark{width:clamp(70px,16vw,124px);height:auto;display:block}
+.dek{grid-column:1/-1;font-size:21px;line-height:1.42;margin:8px 0 0;max-width:50ch}
+.byline{font:400 13px/1.4 var(--mono);color:var(--muted);margin-top:14px}
+h2{font:800 34px/1.04 var(--display);letter-spacing:-.01em;margin:56px 0 10px;text-wrap:balance}
+h2 .n{font:500 13px/1 var(--mono);color:var(--rain);display:block;letter-spacing:.1em;margin-bottom:10px}
+h3{font:600 20px/1.25 var(--display);margin:28px 0 6px}
+p{margin:0 0 16px}
+.lede::first-letter{font:900 72px/.8 var(--display);float:left;margin:6px 10px 0 0;color:var(--rain)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin:26px 0 8px}
+.stats div{background:var(--card);padding:14px 12px}
+.stats b{display:block;font:900 clamp(26px,5.6vw,38px)/1 var(--display);color:var(--rain)}
+.stats span{font:400 12px/1.35 var(--mono);color:var(--muted);display:block;margin-top:6px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.figure{margin:26px 0 30px}
+.fig-h{font:600 19px/1.25 var(--display);margin:0 0 4px}
+.fig-sub{font:400 13px/1.45 var(--mono);color:var(--muted);margin:0 0 12px}
+.src{font:400 12px/1.45 var(--mono);color:var(--muted);margin-top:10px}
+.chart{width:100%;position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+svg text{font-family:var(--mono);fill:var(--fg)}
+.lab{font-size:12px}.lab.m{fill:var(--muted)}.lab.b{font-weight:500}.lab.s{font-size:11px}.lab.w{fill:#fff}
+.tip{position:absolute;pointer-events:none;background:var(--fg);color:var(--bg);font:400 12px/1.45 var(--mono);padding:8px 10px;border-radius:3px;max-width:280px;z-index:1000;transform:translate(-50%,calc(-100% - 12px));display:none}
+/* map controls: one compact row each, scrolling sideways on a phone so the map stays in view */
+.ctl{display:flex;gap:8px;align-items:center;margin:0 0 8px;overflow-x:auto;white-space:nowrap;scrollbar-width:thin;padding-bottom:2px}
+.ctl label.l{font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);flex:0 0 auto}
+.btn{font:500 12px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:8px 10px;cursor:pointer;min-height:34px;flex:0 0 auto}
+.btn[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--rain);outline-offset:2px}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:3px;overflow:hidden;flex:0 0 auto}
+.seg .btn{border:0;border-radius:0;border-right:1px solid var(--border)}
+.seg .btn:last-child{border-right:0}
+.searchrow{position:relative;margin:0 0 8px}
+input[type=search]{font:400 15px/1 var(--mono);background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 11px;min-height:40px;width:100%}
+.suggest{position:absolute;left:0;right:0;top:100%;margin:2px 0 0;padding:0;list-style:none;background:var(--card);border:1px solid var(--border);z-index:1001;font:400 13px/1.3 var(--mono);display:none;max-height:300px;overflow:auto}
+.suggest li{padding:8px 10px;cursor:pointer;border-bottom:1px solid var(--rule)}
+.suggest li span{color:var(--muted)}
+.suggest li[aria-selected="true"],.suggest li:hover{background:var(--panel)}
+#lmap{height:min(76vh,760px);min-height:420px;border:1px solid var(--border);background:var(--sea);border-radius:2px}
+@media (max-width:600px){#lmap{height:62vh;min-height:360px}}
+.leaflet-container{font:400 12px/1.4 var(--mono);background:var(--sea)}
+.leaflet-image-layer.px{image-rendering:pixelated;image-rendering:crisp-edges}
+.leaflet-bar a,.leaflet-bar a:hover{background:var(--card);color:var(--fg);border-bottom-color:var(--border)}
+.leaflet-control-attribution{background:color-mix(in srgb,var(--card) 85%,transparent)!important;color:var(--muted)}
+.leaflet-control-attribution a{color:var(--fg)}
+@media (max-width:600px){.leaflet-control-attribution{font-size:9.5px;line-height:1.25;max-width:70vw}}
+.city{font:500 11px/1 var(--mono);color:var(--ink);white-space:nowrap;text-shadow:0 0 3px var(--bg),0 0 3px var(--bg),0 0 2px var(--bg);pointer-events:none}
+.city.s{font-size:10px;font-weight:400}
+.city i{display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--ink);margin-right:4px;vertical-align:1px}
+.lyrBtn{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;font:600 12px/1 var(--mono);padding:8px 10px;cursor:pointer;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.lyrBtn[aria-expanded="true"]{background:var(--fg);color:var(--bg)}
+.lyrPanel{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:3px;padding:10px 12px 8px;margin-top:6px;width:236px;box-shadow:0 2px 10px rgba(0,0,0,.15);font:400 12px/1.3 var(--mono);max-height:60vh;overflow:auto}
+.lyrPanel[hidden]{display:none}
+.lyrPanel .row{display:grid;grid-template-columns:1fr;gap:4px 8px;align-items:center;margin:0 0 9px}
+.lyrPanel label{display:flex;gap:6px;align-items:center;cursor:pointer;font-weight:600}
+.lyrPanel input[type=range]{width:100%;accent-color:var(--fg)}
+.lyrPanel select{font:400 12px var(--mono);background:var(--bg);color:var(--fg);border:1px solid var(--border);border-radius:2px;padding:2px 4px;width:100%}
+.lyrPanel .sub{display:flex;gap:6px;align-items:center;color:var(--muted);font-size:11px}
+.lyrPanel .sub span{flex:0 0 58px}
+.lyrPanel .reset{font:400 11px var(--mono);color:var(--muted);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+.pin{width:18px;height:18px;border:3px solid var(--ink);border-radius:50%;background:transparent;box-shadow:0 0 0 2px var(--bg)}
+#legend{display:flex;flex-wrap:wrap;gap:4px 12px;font:400 12px/1.3 var(--mono);margin:8px 0 0}
+#legend span{display:inline-flex;align-items:center;gap:5px;cursor:pointer}
+#legend span.off{opacity:.35}
+.sw{display:inline-block;width:13px;height:13px;border:1px solid rgba(0,0,0,.15);flex:0 0 auto}
+.answer{background:var(--card);border:1px solid var(--border);border-top:6px solid var(--rain);padding:14px 16px 10px;margin:10px 0 0;min-height:96px}
+.answer .big{font:800 clamp(21px,4.4vw,28px)/1.18 var(--display);margin:2px 0 8px;text-wrap:balance}
+.answer .big b{color:var(--rain)}
+.answer .pn{font:400 12.5px/1.5 var(--mono);color:var(--muted);margin:6px 0}
+.route{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font:400 13px/1.3 var(--mono);margin:8px 0}
+.route i{font-style:normal;color:var(--muted)}
+.route b{font-weight:500;background:var(--panel);padding:3px 6px;border-radius:2px}
+.route b.sea{background:var(--rain);color:var(--bg)}
+.pull{font:600 26px/1.25 var(--display);border-left:6px solid var(--rain);padding:4px 0 4px 18px;margin:30px 0}
+.note{background:var(--panel);border:1px solid var(--rule);padding:14px 16px;font-size:16px;margin:22px 0}
+.note h3{margin-top:0}
+table.t{width:100%;border-collapse:collapse;font:400 13px/1.35 var(--mono)}
+table.t th{text-align:left;font-weight:500;color:var(--muted);border-bottom:2px solid var(--fg);padding:6px 8px 6px 0}
+table.t td{border-bottom:1px solid var(--rule);padding:7px 8px 7px 0;vertical-align:top}
+table.t td.num,table.t th.num{text-align:right;white-space:nowrap}
+table.t td small{color:var(--muted);display:block}
+table.t tr.go{cursor:pointer}
+table.t tr.go:hover td{background:var(--panel)}
+.tablewrap{overflow-x:auto}
+@media (max-width:600px){table.t .wide{display:none}}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+@media (max-width:600px){.cards{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-left:10px solid var(--rain);padding:12px 14px;font:400 13px/1.5 var(--mono);cursor:pointer}
+.card b{font:600 18px/1.2 var(--display);display:block;margin-bottom:2px}
+.card .big{font:900 30px/1.05 var(--display);margin:6px 0 2px}
+.card .big span{color:var(--muted);font:400 13px/1 var(--mono)}
+details{margin:14px 0}
+summary{font:500 13px/1.4 var(--mono);cursor:pointer;color:var(--fg);padding:8px 0}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.cta a{font:500 13px/1 var(--mono);text-decoration:none;border:1px solid var(--fg);padding:11px 14px;border-radius:3px}
+.cta a.p{background:var(--deep);border-color:var(--deep);color:var(--bg)}
+footer{border-top:6px double var(--fg);margin-top:56px;padding-top:16px;font:400 13px/1.55 var(--mono);color:var(--muted)}
+footer p{margin:0 0 10px}
+.theme{position:fixed;right:12px;bottom:12px;z-index:1002}
+.loading{font:400 12px/1.4 var(--mono);color:var(--muted)}
+@media print{.theme,.ctl{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="kicker"><b>Data study</b><span>Rivers and seas</span><span>Britain, Ireland and the world</span></div>
+<header class="hero">
+  <h1>Where <span>rain</span> goes</h1>
+  <svg class="mark" viewBox="0 0 120 120" aria-hidden="true"><g id="heroMark"></g></svg>
+  <p class="dek">Every raindrop that lands on Britain or Ireland runs downhill into one of seven seas. Every drop on the world's land ends in one of a hundred seas, or in a lake with no way out. Which one does yours reach, and how far does it travel first?</p>
+</header>
+<div class="byline">Dr Tristan Hotham, Independent researcher · 2026 · Data: OS Open Rivers, OS Open Names, AWS Terrain Tiles, HydroBASINS (HydroSHEDS), Marine Regions IHO Sea Areas, Natural Earth, GeoNames</div>
+
+<div class="stats">
+  <div><b>{{derived.gb_ns_share|pct}}</b><span>of Great Britain drains to the North Sea</span></div>
+  <div><b>{{uk.longest_gb.0.km|int}} km</b><span>Britain's longest raindrop journey: from near Dylife in Powys, down the Severn</span></div>
+  <div><b>{{derived.world_inland_share|pct}}</b><span>of the world's land (outside Antarctica) never drains to the sea</span></div>
+  <div><b>{{derived.nile_km|int}} km</b><span>the longest journey in the world model: Burundi to the Mediterranean by the Nile</span></div>
+</div>
+
+<p class="lede">Stand anywhere in Britain when it rains and the water at your feet has already chosen a sea. On the Cotswold edge near Birdlip, a drop can set off down the Churn and the Thames to the North Sea, {{derived.thames_km|int}} km away. A drop landing {{uk.thames_head_contrast.km_west|f1}} km to the west runs down to the Severn instead and reaches the Bristol Channel after only {{uk.thames_head_contrast.path_km|int}} km. The line between them is a watershed, and Britain is criss-crossed with them.</p>
+<p>I followed the rain downhill for every 180 metre square of Britain and Ireland, using a model of the land surface and the Ordnance Survey's open map of every named river and stream, and for the whole world using HydroBASINS, a global atlas of river basins. Each place is coloured by the sea its water reaches, using the International Hydrographic Organization's map of the world's seas. Click anywhere, or search for a place, to see where its rain goes, how far it travels and which rivers carry it.</p>
+
+<h2 id="map-h"><span class="n">01 · The map</span>Which sea does your rain end up in?</h2>
+<div class="bleed">
+  <div class="searchrow">
+    <input type="search" id="q" placeholder="Search a place or UK postcode, or click the map" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="sug" aria-label="Search a place or postcode">
+    <ul class="suggest" id="sug" role="listbox"></ul>
+  </div>
+  <div class="ctl" role="group" aria-label="Map view">
+    <label class="l">View</label>
+    <div class="seg"><button class="btn" data-view="uk" aria-pressed="true">Britain and Ireland</button><button class="btn" data-view="world" aria-pressed="false">World</button></div>
+    <label class="l">Colour</label>
+    <div class="seg"><button class="btn" data-mode="sea" aria-pressed="true">Sea</button><button class="btn" data-mode="ocean" aria-pressed="false">Ocean</button><button class="btn" data-mode="dist" aria-pressed="false">Distance</button></div>
+  </div>
+  <div id="lmap" role="region" aria-label="Map of where rain drains"><p class="loading" style="padding:16px">Loading the map data (about 8 MB)…</p></div>
+  <div id="legend"></div>
+  <div class="answer" id="answer" aria-live="polite"><div class="pn">Click or tap the map, or search above, to follow a raindrop to the sea.</div></div>
+  <div class="src">Britain: my own model at about 180 m (shown at 360 m), river names from OS Open Rivers. Ireland and the Isle of Man: the same terrain model without river names. Rest of the world: HydroBASINS level 7 sub-basins at 0.1°. Seas: IHO Sea Areas (Marine Regions). Use "Map layers" for hills, rivers, watersheds, place names and the base map.</div>
+</div>
+
+<h2><span class="n">02 · Seven seas</span>Half of Britain faces east</h2>
+<p>Great Britain's rain splits between seven of the IHO's sea areas. Almost exactly half of the island, {{derived.gb_ns_share|pct1}}, drains east to the North Sea. The western seas together take {{derived.gb_west_share|pct}}: the Irish Sea ({{uk.areas.Great Britain.Irish Sea.share|pct}}), the Bristol Channel ({{uk.areas.Great Britain.Bristol Channel.share|pct}}), the Inner Seas off the west coast of Scotland ({{uk.areas.Great Britain.Inner Seas (west Scotland).share|pct}}), the open Atlantic ({{uk.areas.Great Britain.Atlantic Ocean.share|pct1}}) and the Celtic Sea ({{uk.areas.Great Britain.Celtic Sea.share|pct1}}). The English Channel takes the rest, {{derived.gb_channel_share|pct}}.</p>
+<p>The nations are very different. {{uk.areas.England.North Sea.share|pct}} of England drains to the North Sea, but Wales sends none of its rain there at all: {{uk.areas.Wales.Bristol Channel.share|pct}} goes to the Bristol Channel and {{uk.areas.Wales.Irish Sea.share|pct}} to the Irish Sea. Scotland is split, {{uk.areas.Scotland.North Sea.share|pct}} east and {{uk.areas.Scotland.Inner Seas (west Scotland).share|pct}} to the sea lochs and sounds of the west. Most of Northern Ireland ({{uk.areas.Northern Ireland.Inner Seas (west Scotland).share|pct}}) drains by Lough Neagh and the Bann, or by Belfast Lough, into the North Channel, which the IHO counts as part of the Inner Seas off the West Coast of Scotland. More than half of Ireland ({{uk.areas.Ireland.Atlantic Ocean.share|pct}}) faces the open Atlantic.</p>
+<div class="figure">
+  <div class="fig-h">Where each nation's rain goes</div>
+  <div class="fig-sub">Share of land area draining to each IHO sea area</div>
+  <div class="chart" id="nations"></div>
+  <div class="src">Great Britain from my 180 m model; Ireland, Northern Ireland and the Isle of Man from the same terrain model without river names. Nations from OS Open Names and Natural Earth borders.</div>
+</div>
+
+<h2><span class="n">03 · The spine</span>Britain's great divide</h2>
+<p>The line that splits North Sea rain from everything else runs the length of the island. On my grid it is about {{uk.gb_north_sea_divide_km|kms}} km long, wriggling from the north coast of Scotland to the Kent coast near Kingsdown. It reaches its highest point, {{uk.north_sea_divide_points.highest.elev_m|int}} m, beside Ben Alder in the Central Highlands, and only {{uk.ns_divide_share_below_100m|pct}} of it lies below 100 m. Away from the coast its lowest point is just {{uk.north_sea_divide_points.lowest.elev_m|int}} m, near Corsback Hill in the flat country of Caithness.</p>
+<div class="figure">
+  <div class="fig-h">The height of the North Sea divide, from south to north</div>
+  <div class="fig-sub">Height in metres. Each dot is a 180 m cell on the divide (every fourth one shown); heights from AWS Terrain Tiles</div>
+  <div class="chart" id="spine"></div>
+</div>
+<p>Some towns sit right on a watershed, so that rain falling at one end of the high street goes to a different sea from rain at the other. On my grid {{uk.places.towns_on_watershed|int}} of Britain's {{uk.places.n_cities_towns|int}} OS towns and cities have their centre on a cell next to one that drains to another sea, and so do {{uk.places.villages_on_watershed|int}} villages. Four of the seven are in the Black Country, where the ridge between the Severn and the Trent runs through Dudley, Sedgley, Rowley Regis and Blackheath. The others are Bedworth, Market Drayton and Cumbernauld, which sits on the divide between the Forth and the Clyde.</p>
+
+<h2><span class="n">04 · Where three seas meet</span>Six triple points</h2>
+<p>In a few places three watersheds meet, and a raindrop could set off for any of three seas. I found {{uk.gb_triple_points|len}} on mainland Great Britain and its islands. The best known is in the Southern Uplands, where Clyde Law looks down on the heads of the Clyde (west to the Inner Seas), the Tweed (east to the North Sea) and the Annan (south to the Irish Sea). Another is a low, quiet one in north Staffordshire near Swallow Hill, at {{uk.gb_triple_points.2.elev_m|int}} m, where the Tern sets off for the Severn, the Lea for the Weaver, and Meece Brook for the Sow and the Trent.</p>
+<div class="figure">
+  <div class="tablewrap"><table class="t" id="triples"></table></div>
+  <div class="src">A triple point here is a 2 by 2 block of 180 m cells touching three seas. Tap a row to see it on the map. Hill names are the nearest OS Open Names hill.</div>
+</div>
+
+<h2><span class="n">05 · The long way round</span>From Plynlimon to the sea</h2>
+<p>Half of Britain is within {{uk.gb_dist_median_km|int}} km of the sea by the route its water takes, and {{uk.gb_share_within_10km|pct}} is within 10 km. But {{uk.gb_share_over_100km|pct}} of the island sends its rain more than 100 km. The two longest journeys end in different seas: {{uk.longest_gb.0.km|int}} km from near Dylife, under Plynlimon, down the Severn to the Bristol Channel, and {{uk.longest_gb.1.km|int}} km from near Birdlip in the Cotswolds down the Churn and the Thames to the North Sea. Llanidloes is the town whose rain travels furthest ({{uk.places.farthest_towns.0.km|int}} km), ahead of Cirencester ({{uk.places.farthest_towns.1.km|int}} km) and Swindon ({{uk.places.farthest_towns.2.km|int}} km).</p>
+<div class="cards" id="longcards"></div>
+<div class="figure">
+  <div class="fig-h">Britain's biggest river systems</div>
+  <div class="fig-sub">Land area (km²) draining through each river's mouth, as the model finds it</div>
+  <div class="chart" id="systems"></div>
+  <div class="src">Grouped by the last named watercourse before the sea. The Ouse and the Trent both end in the Humber; the model keeps them apart because the Humber is tidal water, not river. The Fens drain through several artificial channels, such as the Hundred Foot Drain and The Haven at Boston.</div>
+</div>
+
+<h2><span class="n">06 · The world</span>Up to a quarter of the land never reaches the sea</h2>
+<p>Across the world's land outside Antarctica, the Atlantic and its seas take the most rain: {{world.ocean_share.Atlantic.share|pct}} of the land, including the Mediterranean, the Black Sea, the Gulf of Mexico and the Baltic. The Arctic takes {{world.ocean_share.Arctic.share|pct}}, much of it through the great Siberian rivers into the Kara and Laptev seas, the Pacific {{world.ocean_share.Pacific.share|pct}} and the Indian Ocean {{world.ocean_share.Indian.share|pct}}. But {{derived.world_inland_share|pct}} drains to no sea at all. Its water ends in lakes and salt pans with no outlet, or simply evaporates: the Caspian Sea (by far the largest, taking the Volga), Lake Chad, the Tarim basin, Lake Eyre and the Okavango delta.</p>
+<div class="figure">
+  <div class="fig-h">Where the world's land drains</div>
+  <div class="fig-sub">Share of land area outside Antarctica</div>
+  <div class="chart" id="oceans"></div>
+</div>
+<div class="figure">
+  <div class="fig-h">The largest basins with no way out</div>
+  <div class="tablewrap"><table class="t" id="inland"></table></div>
+  <div class="src">HydroBASINS sinks: a basin ends at an endorheic sink, or at the shore of the Caspian Sea. Rivers named from Natural Earth where its lines cross the basin.</div>
+</div>
+<p>The world's longest journeys in the model are continental: {{derived.nile_km|int}} km from the hills of Burundi down the Kagera and the Nile to the Mediterranean, {{world.longest_by_ocean.1.km|int}} km from the Tibetan plateau down the Yangtze to the East China Sea, and {{world.longest_by_ocean.3.km|int}} km from the Altai mountains down the Irtysh and the Ob to the Kara Sea. The longest journey that ends inland runs {{world.longest_by_ocean.4.km|int}} km down the Oka and the Volga to the Caspian. Moscow's rain goes that way too.</p>
+<div class="cards" id="worldcards"></div>
+<p>Only one place on the world grid touches the Atlantic, Pacific and Arctic drainages at once once tiny closed hollows are set aside: the mountains of Glacier National Park in Montana, at {{world.triple_points_ocean_only.0.lat|f1}}° N, {{world.triple_points_ocean_only.0.lon|absf1}}° W. That is where the famous Triple Divide Peak stands, sending water to the Pacific, to the Gulf of Mexico and to Hudson Bay, which the IHO's 2002 draft treats as part of the Arctic. Indonesia's islands drain to {{world.countries_most_seas.0.n_seas|int}} different IHO sea areas, more than any other country; Russia and Canada drain to {{world.countries_most_seas.1.n_seas|int}} each. At the other extreme, {{world.countries_all_inland|len}} countries and territories send essentially none of their rain to the sea, all of them in Central Asia and the Caucasus, around the Caspian and the Aral basin.</p>
+
+<h2><span class="n">07 · How sure is this?</span>Two independent checks</h2>
+<p>For Britain I checked the model two ways. First, against the river network itself: following each OS watercourse downstream link by link to its mouth, {{derived.net_agree|pct1}} of the {{uk.validation.network.km_routed|int}} km of watercourse that the network connects to the sea runs through cells my terrain model sends to the same sea. Second, against HydroBASINS, built from a different elevation model (HydroSHEDS) by different people: the two maps agree on {{derived.hb_gb|pct1}} of Great Britain and {{derived.hb_ie|pct1}} of Ireland. The largest differences are where two neighbouring sea areas meet at the coast, such as the Bristol Channel and the Celtic Sea, rather than on inland watersheds.</p>
+
+<div class="note" id="method">
+  <h3>How I did this</h3>
+  <p><b>Britain and Ireland.</b> I built a grid of web-mercator cells about 180 m across from AWS Terrain Tiles (zoom 10, averaged to zoom 9). Every OS Open Rivers watercourse in Great Britain except canals was burned into the surface, deeper for bigger rivers, so that paths keep to the mapped channels. A priority flood then climbs inland from the sea all round the coast, always taking the lowest cell next; each land cell inherits the sea of the cell it was reached from, which is the next step down its path. The sea of each coastal cell is the nearest IHO sea area. Path lengths add up the steps (diagonal steps count √2). River names come from the OS watercourses the path follows for at least about 1 km (2 km for brooks, drains and ditches). Ireland and the Isle of Man use the terrain alone.</p>
+  <p><b>The world.</b> HydroBASINS level 7 (57,646 sub-basins, version 1c) rasterised at 0.05°. Each sub-basin is followed downstream to its next sink. If that is an endorheic sink, or the shore of the Caspian Sea, the water stays inland; otherwise it reaches the IHO sea nearest to the basin's single pour point. Lumped coastal sub-basins, made of many small streams, are assigned cell by cell to their nearest sea, as are a few far-flung islands that HydroBASINS lumps with another coast. Distances are HydroBASINS river distance to the sink plus the straight line to the sub-basin's own outlet. I group the IHO seas into oceans with a simple convention: the Mediterranean, Black, Baltic and Caribbean seas and the Gulf of Mexico count with the Atlantic; the Greenland Sea, Baffin Bay, Hudson Bay and the seas north of Russia and Alaska with the Arctic; the seas of the Indonesian archipelago with the Pacific, except the Timor, Arafura and Savu seas.</p>
+  <p><b>Limits.</b> This is a model of where water would flow over the land surface, not a hydrological survey. It ignores groundwater (chalk and limestone can carry water under a surface divide), pumped drainage, canals, water transfers and reservoirs that pipe water to other catchments. On flat land, such as the Fens, the Somerset Levels and Ireland's central lowlands, a 180 m terrain model cannot always see which way water goes; the burned-in rivers fix this in Britain but not in Ireland. The OS network has small gaps; I bridged those of up to 300 m. Shares are of the grid's land, which is a few per cent larger than official land areas because coastal cells and tidal flats count in full. HydroBASINS counts every closed hollow as a sink, so its inland share is higher than one that counts only large closed basins. Mexico City, for instance, sits in a valley that was naturally closed and is now drained by tunnels, and the model leaves it inland. River names for the world come from Natural Earth's generalised rivers, so many small rivers have no name.</p>
+</div>
+
+<h3>Sources and licences</h3>
+<ul class="src" style="padding-left:18px">
+  <li>OS Open Rivers and OS Open Names: contain OS data © Crown copyright and database right 2026, Open Government Licence v3.0.</li>
+  <li>Elevation: AWS Terrain Tiles (Mapzen/Tilezen terrarium), from SRTM, EU-DEM, OS Terrain and other open sources listed by Tilezen.</li>
+  <li>This product (Where Rain Goes) incorporates data from the HydroSHEDS version 1 database which is © World Wildlife Fund, Inc. (2006-2022) and has been used herein under license. WWF has not evaluated the data as altered and incorporated within Where Rain Goes, and therefore gives no warranty regarding its accuracy, completeness, currency or suitability for any particular purpose. Portions of the HydroSHEDS v1 database incorporate data which are the intellectual property rights of © USGS (2006-2008), NASA (2000-2005), ESRI (1992-1998), CIAT (2004-2006), UNEP-WCMC (1993), WWF (2004), Commonwealth of Australia (2007), and Her Royal Majesty and the British Crown and are used under license. The HydroSHEDS v1 database and more information are available at https://www.hydrosheds.org. Lehner, B. and Grill, G. (2013) Global river hydrography and network routing: baseline data and new approaches to study the world's large river systems. Hydrological Processes 27(15): 2171 to 2186.</li>
+  <li>Flanders Marine Institute (2018) IHO Sea Areas, version 3, marineregions.org, CC BY 4.0.</li>
+  <li>Natural Earth (rivers, lakes, land, countries): public domain. GeoNames cities: CC BY 4.0. Postcode lookups: postcodes.io (OS and ONS data, Open Government Licence). Live base maps and hill shading: Esri.</li>
+</ul>
+<div class="cta">
+  <a class="p" href="https://github.com/Tristan-Hotham/where-rain-goes">Data and code</a>
+  <a href="https://doi.org/10.5281/zenodo.23757700">Paper (Zenodo)</a>
+  <a href="https://blog.tristanhotham.com/2026/10/29/where-rain-goes/">Blog post</a>
+  <a href="https://blog.tristanhotham.com/">More data studies</a>
+</div>
+<footer>
+  <p>Dr Tristan Hotham, Independent researcher. ORCID 0000-0003-4931-9349. Cite as: Hotham, T. (2026) Where rain goes: the sea that every place in Britain, Ireland and the world drains to. https://doi.org/10.5281/zenodo.23757700</p>
+  <p>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</p>
+  <p>Text and figures: CC BY 4.0. Code: MIT. Data files: see the README for each source's licence (OS data under the Open Government Licence; HydroSHEDS-derived data under the HydroSHEDS licence with the attribution above). Other studies: <a href="https://maps.tristanhotham.com/sea-level/">Drowned and rising</a>, <a href="https://maps.tristanhotham.com/sun-and-rain-uk/">Sun and rain</a>, <a href="https://maps.tristanhotham.com/dale-down-fell-beck/">Dale, down, fell and beck</a>, <a href="https://blog.tristanhotham.com/">all posts</a>.</p>
+</footer>
+</div>
+<div class="tip" id="tip"></div>
+<button class="btn theme" id="theme" aria-label="Toggle dark mode">◐</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+/*SCRIPT*/
+</script>
+</body>
+</html>

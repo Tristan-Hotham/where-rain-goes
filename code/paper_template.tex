@@ -1,0 +1,193 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headfont{Inter}[UprightFont=*-ExtraBold,BoldFont=*-ExtraBold,Extension=.otf,Path=/usr/share/fonts/opentype/inter/]
+\usepackage[a4paper,margin=2.3cm]{geometry}
+\usepackage{graphicx,booktabs,float,caption,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\setstretch{1.05}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\titleformat{\section}{\headfont\Large}{\thesection}{0.8em}{}
+\titleformat{\subsection}{\headfont\large}{\thesubsection}{0.8em}{}
+\captionsetup{font=small,labelfont=bf}
+\urlstyle{same}
+\hypersetup{pdftitle={Where Rain Goes: The Sea Every Place in Britain, Ireland and the World Drains To},pdfauthor={Tristan Hotham}}
+
+\begin{document}
+\begin{center}
+{\Large\bfseries Where Rain Goes:\\[2pt] The Sea Every Place in Britain, Ireland and the World Drains To\par}
+\vspace{1.2em}
+{\large Tristan Hotham\par}
+\vspace{0.3em}
+{\small Independent researcher\\
+ORCID: 0000-0003-4931-9349\\
+DOI: \href{https://doi.org/10.5281/zenodo.23757700}{https://doi.org/10.5281/zenodo.23757700}\par}
+\vspace{0.8em}
+2026
+\end{center}
+
+\begin{quote}
+\small
+\begin{center}\textbf{Abstract}\end{center}
+Every raindrop that lands on dry land either reaches the sea or ends in a basin with no outlet. I mapped which sea that is for every place in Britain and Ireland at about 180 m resolution, and for the world's land outside Antarctica at 0.05\textdegree, and published the result as an interactive map in which any spot can be clicked to see its sea, the length of the journey and the rivers on the way. For Britain I ran a priority flood from the coast over a terrain model with the Ordnance Survey's open river network burned in, assigning each coastal start to a sea area of the International Hydrographic Organization (IHO). For the world I traced HydroBASINS level 7 sub-basins to their sinks and outlets. {{derived.gb_ns_share|pct1}} of Great Britain drains to the North Sea and {{derived.gb_west_share|pct}} to the seas of the west; Wales sends none of its rain to the North Sea. The North Sea divide is about {{uk.gb_north_sea_divide_km|kms}} km long on the grid, and I find {{uk.gb_triple_points|len}} triple points where three sea areas meet, including Clyde Law at the heads of the Clyde, Tweed and Annan. The longest journeys in Britain are {{uk.longest_gb.0.km|int}} km down the Severn and {{uk.longest_gb.1.km|int}} km down the Thames. Worldwide, {{derived.world_inland_share|pct1}} of the land drains to no sea, by far the largest such basin being the Caspian. The model agrees with the river network along {{derived.net_agree|pct1}} of connected watercourse length and with HydroBASINS on {{derived.hb_gb|pct1}} of Great Britain and {{derived.hb_ie|pct1}} of Ireland.
+
+\textbf{Keywords:} watersheds; drainage divides; river basins; endorheic basins; IHO sea areas; priority flood; OS Open Rivers; HydroBASINS; Great Britain; open data
+\end{quote}
+
+\section{Introduction}
+
+Ask people where the rain that falls on their town ends up and most will name the nearest river, if that. Yet the answer is fixed by the shape of the land: every point lies in one river basin, every basin ends in one sea or in a closed hollow, and the lines between basins, the watersheds or drainage divides, run across the country in a pattern that is rarely drawn. In Britain the pattern has a familiar outline (a long divide down the island with the North Sea to the east), but the details are less known: how much of each nation faces each sea, where three seas meet, which towns straddle a divide and how far the water from a given hillside travels before it reaches salt water.
+
+This note answers those questions with open data and a deliberately simple, documented method, and makes the answers explorable on an interactive page (\url{https://maps.tristanhotham.com/where-rain-goes/}) where a reader can click anywhere, or search for a place or a UK postcode, to see which sea its rain reaches, roughly how far it travels and which named rivers carry it. The same question is then asked for the world's land. The aim is a clear, checkable picture at national and continental scale, not a hydrological model of any single catchment.
+
+\section{Data}
+
+\subsection{Britain and Ireland}
+
+Rivers come from OS Open Rivers (Ordnance Survey 2026a), a generalised network of {{uk.meta.os_links|int}} watercourse links in Great Britain with flow direction, form (inland river, tidal river, lake, canal), names and connecting nodes, including nodes marked as outlets to the sea. Place names come from OS Open Names (Ordnance Survey 2026b): its cities, towns and villages and, for naming points on the map, its hills. Elevation comes from AWS Terrain Tiles (Tilezen 2026), the open web-mercator elevation tiles that merge SRTM, EU-DEM and other sources, which I used at zoom 10 (about 95 m at 52\textdegree\ N) and averaged to zoom 9. Natural Earth (2026) land polygons fill gaps in the coast where the elevation tiles put land below sea level, and its country borders separate Northern Ireland from Ireland.
+
+\subsection{The world and the seas}
+
+For the world I used HydroBASINS version 1c (Lehner and Grill 2013), the hierarchy of sub-basins derived from HydroSHEDS (Lehner et al. 2008). Level 7 divides the land outside Antarctica into 57,646 sub-basins, each with the identifier of the next sub-basin downstream, of its next sink, its river distance to that sink and a flag for endorheic (closed) basins. The HydroBASINS Pour Points layer gives the outlet of each sub-basin. Seas are the IHO Sea Areas compiled by the Flanders Marine Institute (2018) from the IHO's \emph{Limits of Oceans and Seas} (IHO 1953): 101 named seas and oceans. River names for the world come from Natural Earth's 1:10 million rivers, and city names from GeoNames (2026).
+
+\section{Methods}
+
+\subsection{A raindrop's path in Britain and Ireland}
+
+I built a grid of web-mercator zoom 9 cells over 10.9\textdegree\ W to 2.1\textdegree\ E and 49.6\textdegree\ to 60.9\textdegree\ N, {{uk.meta.cell_m_median|int}} m across at the median British latitude. A cell is land if its height is above 0 m, or above $-3$ m where Natural Earth shows land. Every OS watercourse except canals (and links whose names end in ``Canal'') was rasterised and burned into the surface: lowered by 20 m plus 15 m for each tenfold increase in the length of network above the link, so that large rivers sit in deeper trenches and paths keep to them.
+
+A priority flood (Barnes et al. 2014) then starts from every sea cell next to land, each carrying the IHO sea area nearest to it, and climbs inland, always taking the lowest unvisited cell next. Each land cell inherits the sea of the cell from which it was reached and records that cell as the next step on its path. Following those steps from any cell leads down the burned channels, and over any filled hollows, to the coast. The path length adds up the steps (diagonals count $\sqrt{2}$). The names of the OS watercourses along the path are recorded once the path has followed a watercourse for at least 5 cells (about 0.9 km), or 12 cells for brooks, drains and ditches, which often run beside a main river; when the path returns to a river already met downstream, the side-steps in between are dropped. Ireland and the Isle of Man have no OS river data and use the terrain alone. Nations come from the nearest OS Open Names place (England, Scotland, Wales) and from Natural Earth borders (Northern Ireland, Ireland).
+
+\subsection{The world}
+
+Each HydroBASINS sub-basin was rasterised at 0.05\textdegree\ and followed downstream to its next sink. If that sink is endorheic, or lies on the shore of the Caspian Sea (which HydroSHEDS, like the IHO map, leaves outside its basins), the water stays inland. Otherwise the basin reaches the sea at its sink's single pour point and takes the IHO sea nearest to that point. Lumped coastal sub-basins, which gather many small streams with many outlets, take the nearest sea cell by cell, as do a few far-flung islands that HydroBASINS lumps with a sub-basin on another coast (more than 150 km plus twice the square root of the sub-basin's area from its pour point). The distance for a cell is the HydroBASINS river distance from its sub-basin's outlet to the sink plus the straight line from the cell to that outlet, a lower bound for the path inside the sub-basin. River names along a path are the Natural Earth rivers with the most length in each sub-basin, added only when they are at least as important (by Natural Earth's scale rank) as the last name added.
+
+I group the IHO seas into five oceans by a simple convention: the Mediterranean, Black, Baltic and Caribbean seas and the Gulf of Mexico count with the Atlantic; the Greenland Sea, Davis Strait, Baffin Bay, Hudson Bay, Hudson Strait and the seas north of Russia and Alaska with the Arctic (the IHO's 2002 draft places Hudson Bay in the Arctic Ocean; Wikipedia contributors 2026); and the seas of the Indonesian archipelago with the Pacific, except the Timor, Arafura and Savu seas, which go with the Indian Ocean.
+
+\subsection{Watersheds and triple points}
+
+A cell is on a watershed if one of its eight neighbours drains to a different sea. A triple point is a 2 by 2 block of land cells touching three seas; blocks within about 2.7 km of each other count once. Divide lengths count cell edges between seas and are multiplied by $\pi/4$, the average ratio of a straight line's length to its staircase on a grid. For the world's ocean triple points, closed hollows draining less than 10,000 km\textsuperscript{2} are given back to the ocean that HydroBASINS joins them to, so that a pothole on a divide does not hide a meeting of oceans.
+
+\subsection{Checks}
+
+I checked the British map two ways. First, each OS watercourse was traced through the network itself, link by link, to a sea outlet (an OS outlet node within 4 km of the IHO sea, or the end of a tidal river), bridging gaps of up to 300 m and avoiding canals unless no natural channel leads on; I then compared that sea with the sea of the grid cells the watercourse runs through. Second, I traced HydroBASINS level 12 sub-basins (the finest level) in the same way as the world model and compared them with my map cell by cell on a 0.01\textdegree\ grid.
+
+\section{Results}
+
+\subsection{Seven seas for Great Britain}
+
+Great Britain's rain reaches seven IHO sea areas (Figure~\ref{fig:britain}, Table~\ref{tab:areas}). {{derived.gb_ns_share|pct1}} of the island drains to the North Sea, {{derived.gb_west_share|pct1}} to the western seas and {{derived.gb_channel_share|pct1}} to the English Channel. The nations differ sharply (Figure~\ref{fig:nations}). {{uk.areas.England.North Sea.share|pct}} of England drains east. Wales sends nothing to the North Sea: {{uk.areas.Wales.Bristol Channel.share|pct}} of it reaches the Bristol Channel and {{uk.areas.Wales.Irish Sea.share|pct}} the Irish Sea. Scotland divides {{uk.areas.Scotland.North Sea.share|pct}} east and {{uk.areas.Scotland.Inner Seas (west Scotland).share|pct}} west to the Inner Seas off the West Coast of Scotland. Three quarters of Northern Ireland ({{uk.areas.Northern Ireland.Inner Seas (west Scotland).share|pct}}) drains through Lough Neagh and the Bann, or Belfast Lough, to the North Channel, which the IHO includes in those Inner Seas, and {{uk.areas.Ireland.Atlantic Ocean.share|pct}} of Ireland faces the open Atlantic.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.78\linewidth]{f_britain.png}
+\caption{The sea each part of Britain and Ireland drains to, with hill shading, the larger modelled rivers and the watersheds between seas. Seas are IHO Sea Areas.}\label{fig:britain}
+\end{figure}
+
+{{TABLE_AREAS}}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.92\linewidth]{f_nations.png}
+\caption{Share of each nation's land draining to each IHO sea area.}\label{fig:nations}
+\end{figure}
+
+\subsection{The great divide}
+
+The North Sea divide runs from the north coast of Scotland to the Kent coast near Kingsdown, about {{uk.gb_north_sea_divide_km|kms}} km on the grid. It is a mountain watershed in the north and a low, rolling one in the south (Figure~\ref{fig:spine}): its highest point, {{uk.north_sea_divide_points.highest.elev_m|int}} m, is beside Ben Alder, and away from the coast its lowest is {{uk.north_sea_divide_points.lowest.elev_m|int}} m near Corsback Hill in Caithness. Only {{uk.ns_divide_share_below_100m|pct}} of its cells lie below 100 m. Of {{uk.places.n_cities_towns|int}} OS cities and towns, {{uk.places.towns_on_watershed|int}} have their centre cell on a watershed between seas: Dudley, Sedgley, Rowley Regis and Blackheath in the Black Country, on the ridge between the Severn and the Trent, and Bedworth, Market Drayton and Cumbernauld. {{uk.places.villages_on_watershed|int}} of {{uk.places.n_villages|int}} villages do too.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.92\linewidth]{f_spine.png}
+\caption{Height of the cells on the North Sea divide against latitude.}\label{fig:spine}
+\end{figure}
+
+\subsection{Triple points}
+
+Table~\ref{tab:triples} lists the {{uk.gb_triple_points|len}} triple points. The clearest is in the Southern Uplands at Clyde Law, where the first named streams lead to the Clyde, the Tweed and the Annan (Figure~\ref{fig:clyde}). Another lies at only {{uk.gb_triple_points.2.elev_m|int}} m in north Staffordshire near Swallow Hill, where the Tern (to the Severn), the Lea (to the Weaver) and Meece Brook (to the Sow and the Trent) begin close together. Two of the six, in Pembrokeshire and Cornwall, depend on where the IHO draws the line between the Bristol Channel and the Celtic Sea.
+
+{{TABLE_TRIPLES}}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.8\linewidth]{f_clyde_law.png}
+\caption{Clyde Law, South Lanarkshire: the meeting of Inner Seas, North Sea and Irish Sea drainage, with the modelled streams.}\label{fig:clyde}
+\end{figure}
+
+\subsection{Distances and river systems}
+
+Half of Great Britain's land lies within {{uk.gb_dist_median_km|int}} km of the sea along its modelled path; {{uk.gb_share_within_10km|pct}} lies within 10 km and {{uk.gb_share_over_100km|pct}} more than 100 km. The longest path in each sea is shown in Table~\ref{tab:long}. The two longest of all end in different seas: {{uk.longest_gb.0.km|int}} km from near Dylife in Powys to the Bristol Channel, and {{uk.longest_gb.1.km|int}} km from near Birdlip in the Cotswolds, by the Churn and the Thames, to the North Sea. The Thames start lies on the divide itself: a cell {{uk.thames_head_contrast.km_west|f1}} km to the west drains to the Severn and reaches the Bristol Channel after {{uk.thames_head_contrast.path_km|int}} km. These distances end at the OS outlet nodes, which sit in the estuaries, so they are shorter than a river's full length to the open sea. Among towns, Llanidloes ({{uk.places.farthest_towns.0.km|int}} km), Cirencester ({{uk.places.farthest_towns.1.km|int}} km) and Swindon ({{uk.places.farthest_towns.2.km|int}} km) send their rain furthest. Grouping cells by the last named watercourse before the sea (Figure~\ref{fig:systems}) gives the Thames ({{uk.river_systems_top.0.km2|int}} km\textsuperscript{2}) and the Severn ({{uk.river_systems_top.1.km2|int}} km\textsuperscript{2}) as the largest systems; the Ouse and the Trent, which meet in the tidal Humber, appear separately.
+
+{{TABLE_LONG}}
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.9\linewidth]{f_systems.png}
+\caption{The largest river systems in Great Britain by the land draining through the last named watercourse before the sea.}\label{fig:systems}
+\end{figure}
+
+\subsection{The world}
+
+Across the world's land outside Antarctica (Figure~\ref{fig:world}, Table~\ref{tab:world}), the Atlantic and its seas receive the rain of {{world.ocean_share.Atlantic.share|pct1}} of the land, the Arctic {{world.ocean_share.Arctic.share|pct1}}, the Pacific {{world.ocean_share.Pacific.share|pct1}} and the Indian Ocean {{world.ocean_share.Indian.share|pct1}}; {{derived.world_inland_share|pct1}} drains to no sea. The largest closed basin, by far, is the Caspian ({{world.inland_top.0.km2|int}} km\textsuperscript{2}, fed by the Volga and the Ural), followed by Lake Chad, the Tarim basin and Lake Eyre. The longest journeys in the model are {{derived.nile_km|int}} km from Burundi by the Kagera and the Nile to the Mediterranean, {{world.longest_by_ocean.1.km|int}} km down the Yangtze to the East China Sea and {{world.longest_by_ocean.3.km|int}} km by the Irtysh and the Ob to the Kara Sea; the longest inland journey, {{world.longest_by_ocean.4.km|int}} km, follows the Oka and the Volga to the Caspian. Only one ocean triple point appears on the 0.05\textdegree\ grid, at {{world.triple_points_ocean_only.0.lat|f1}}\textdegree\ N, {{world.triple_points_ocean_only.0.lon|absf1}}\textdegree\ W in Montana, the area of Triple Divide Peak, where Pacific, Gulf of Mexico (Atlantic) and Hudson Bay (Arctic) drainage meet. Indonesia drains to {{world.countries_most_seas.0.n_seas|int}} IHO sea areas and Russia and Canada to {{world.countries_most_seas.1.n_seas|int}} each, while {{world.countries_all_inland|len}} countries and territories in Central Asia and the Caucasus send essentially none of their rain to the sea.
+
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{f_world.png}
+\caption{The ocean each part of the world's land drains to, from HydroBASINS level 7 and the IHO Sea Areas, with closed (endorheic) basins in brown.}\label{fig:world}
+\end{figure}
+
+{{TABLE_WORLD}}
+
+\subsection{Checks}
+
+Of the {{uk.validation.network.km_routed|int}} km of OS watercourse that the network itself connects to a sea outlet ({{uk.validation.network.links_routed|int}} of {{uk.validation.network.links|int}} non-canal links), {{derived.net_agree|pct1}} runs through cells that my terrain model sends to the same sea. The comparison with HydroBASINS level 12, built from a different elevation model, agrees on {{derived.hb_gb|pct1}} of Great Britain and {{derived.hb_ie|pct1}} of Ireland. The largest disagreements are where two IHO sea areas meet at the coast (for example the Bristol Channel and the Celtic Sea), where a small shift in an outlet changes the sea, rather than on inland divides.
+
+\section{Discussion}
+
+The picture that emerges is of an island tilted east. Half of Great Britain drains to the North Sea, though the western seas together take almost as much, because in Scotland the main divide runs close to the west coast and Wales lies wholly west of it; only in England does it swing far inland from the west. Wales is the clearest case: none of its rain goes east, because the Severn, Wye and Dee all reach western seas, even where they rise within a few kilometres of English rivers that do. The triple points and the towns on divides show how quietly these boundaries cross the land: most of the North Sea divide runs over moorland and mountain, but in the Midlands it crosses low farmland and towns, and in the Black Country the line between the Bristol Channel and the North Sea runs through the middle of a conurbation.
+
+The world view shows how much of the land never reaches the sea. Closed basins are not only deserts: the Volga, Europe's longest river, ends in the Caspian, and with it the rain of Moscow. HydroBASINS counts every closed hollow, including small ones inside basins that otherwise reach the sea, so its inland share is larger than a count of large closed basins alone would give, and readers should treat the {{derived.world_inland_share|pct}} as an upper estimate in that sense.
+
+\section{Limitations}
+
+This is a surface-flow model. It ignores groundwater, which in chalk and limestone can cross a surface divide; pumped drainage, as in the Fens; and water transfers, canals and reservoirs that pipe water from one catchment to another. On very flat land a 180 m terrain model cannot always tell which way water flows; burned-in rivers fix most of this in Great Britain but not in Ireland, which has no OS river data here. The OS network is generalised and has small gaps, which I bridged up to 300 m. The British grid's land area is a few per cent larger than official figures because coastal cells and tidal flats count in full, so shares are of the grid's land. The sea areas follow the IHO's definitions, which split the water round Britain in ways that are not always intuitive (the North Channel is part of the Inner Seas off the West Coast of Scotland), and my grouping of seas into oceans is a convention. World distances are approximate, combining a HydroBASINS river distance with a straight line inside the first sub-basin, and world river names come from a generalised map, so many small rivers have none. Mexico City, in a valley that was naturally closed and is now drained artificially, is counted as inland.
+
+\section{Conclusion}
+
+With open data and a short chain of simple steps it is possible to say, for any point in Britain or Ireland and on most of the world's land, which sea its rain reaches, roughly how far it travels and through which named rivers. Half of Great Britain faces the North Sea; Wales faces only west; three seas meet at six points on the British mainland and islands; and a fifth of the world's land drains to no sea at all. The interactive map makes each of these results checkable for any place a reader cares about.
+
+\section*{Data and code availability}
+
+Code, derived data and the page are at \url{https://github.com/Tristan-Hotham/where-rain-goes}; the interactive version is at \url{https://maps.tristanhotham.com/where-rain-goes/}; this note and its files are archived at \url{https://doi.org/10.5281/zenodo.23757700}. OS data are used under the Open Government Licence v3.0. This product (Where Rain Goes) incorporates data from the HydroSHEDS version 1 database which is \copyright\ World Wildlife Fund, Inc. (2006 to 2022) and has been used herein under license. WWF has not evaluated the data as altered and incorporated within Where Rain Goes, and therefore gives no warranty regarding its accuracy, completeness, currency or suitability for any particular purpose. Portions of the HydroSHEDS v1 database incorporate data which are the intellectual property rights of \copyright\ USGS (2006 to 2008), NASA (2000 to 2005), ESRI (1992 to 1998), CIAT (2004 to 2006), UNEP-WCMC (1993), WWF (2004), Commonwealth of Australia (2007), and Her Royal Majesty and the British Crown and are used under license. The HydroSHEDS v1 database and more information are available at \url{https://www.hydrosheds.org}.
+
+\section*{Statement on the use of AI}
+
+I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.
+
+\section*{References}
+\small
+\setlength{\parskip}{0.3em}
+Barnes, R., Lehman, C. and Mulla, D. (2014) Priority-flood: an optimal depression-filling and watershed-labeling algorithm for digital elevation models. \emph{Computers and Geosciences} 62: 117 to 127.
+
+Flanders Marine Institute (2018) IHO Sea Areas, version 3. Available at \url{https://www.marineregions.org/}. CC BY 4.0.
+
+GeoNames (2026) GeoNames geographical database, cities with a population over 15,000. \url{https://www.geonames.org/}. CC BY 4.0.
+
+International Hydrographic Organization (1953) \emph{Limits of Oceans and Seas}. Special Publication 23, 3rd edition. Monaco: IHO.
+
+Lehner, B. and Grill, G. (2013) Global river hydrography and network routing: baseline data and new approaches to study the world's large river systems. \emph{Hydrological Processes} 27(15): 2171 to 2186. \url{https://doi.org/10.1002/hyp.9740}.
+
+Lehner, B., Verdin, K. and Jarvis, A. (2008) New global hydrography derived from spaceborne elevation data. \emph{Eos, Transactions American Geophysical Union} 89(10): 93 to 94.
+
+Natural Earth (2026) Free vector and raster map data at 1:10m. \url{https://www.naturalearthdata.com/}. Public domain.
+
+Ordnance Survey (2026a) OS Open Rivers. \url{https://www.ordnancesurvey.co.uk/products/os-open-rivers}. Open Government Licence v3.0.
+
+Ordnance Survey (2026b) OS Open Names. \url{https://www.ordnancesurvey.co.uk/products/os-open-names}. Open Government Licence v3.0.
+
+Tilezen (2026) Terrain Tiles on AWS (Joerd). \url{https://github.com/tilezen/joerd}.
+
+Wikipedia contributors (2026) Hudson Bay. \emph{Wikipedia, The Free Encyclopedia}. \url{https://en.wikipedia.org/wiki/Hudson_Bay}.
+
+\end{document}
