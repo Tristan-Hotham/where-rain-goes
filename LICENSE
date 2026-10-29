@@ -1,0 +1,58 @@
+MIT License
+
+Copyright (c) 2026 Tristan Hotham
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+This licence covers the code in code/ and the page scripts. The text of the
+page, the paper and the figures are released under CC BY 4.0.
+
+The data files in data/ are derived data, with these terms:
+
+- Britain and Ireland grids, places and river tables (data/page/uk_a.png,
+  data/page/uk_b.png, data/page/page.json "uk" part, data/page/places.json "uk"
+  part, data/uk_*.csv) contain OS data (c) Crown copyright and database right
+  2026 (OS Open Rivers, OS Open Names), used under the Open Government Licence
+  v3.0, and heights from AWS Terrain Tiles (Mapzen/Tilezen, from SRTM, EU-DEM and
+  other open sources listed at
+  https://github.com/tilezen/joerd/blob/master/docs/attribution.md). They are
+  released under the Open Government Licence v3.0 with these attributions.
+
+- World grids and tables (data/page/world_idx.png, data/page/world_sea.png,
+  data/page/page.json "world" part, data/world_*.csv) are derived from
+  HydroBASINS and its pour points, which are subject to the HydroSHEDS version 1
+  licence agreement (https://www.hydrosheds.org). Required attribution:
+  This product (Where Rain Goes) incorporates data from the HydroSHEDS version 1
+  database which is (c) World Wildlife Fund, Inc. (2006-2022) and has been used
+  herein under license. WWF has not evaluated the data as altered and
+  incorporated within Where Rain Goes, and therefore gives no warranty regarding
+  its accuracy, completeness, currency or suitability for any particular
+  purpose. Portions of the HydroSHEDS v1 database incorporate data which are the
+  intellectual property rights of (c) USGS (2006-2008), NASA (2000-2005), ESRI
+  (1992-1998), CIAT (2004-2006), UNEP-WCMC (1993), WWF (2004), Commonwealth of
+  Australia (2007), and Her Royal Majesty and the British Crown and are used
+  under license. The HydroSHEDS v1 database and more information are available at
+  https://www.hydrosheds.org.
+  Users of these files must follow the HydroSHEDS licence terms, including this
+  attribution.
+
+- Sea areas: Flanders Marine Institute (2018) IHO Sea Areas, version 3,
+  https://www.marineregions.org (CC BY 4.0). River, lake, land and country data:
+  Natural Earth (public domain). Cities: GeoNames (CC BY 4.0;
+  data/world_cities.csv, data/page/places.json "world" part).
